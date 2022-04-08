@@ -5,14 +5,23 @@ Wordpress - Webshop
 Slutprojektet går ut på att själv ta fram en e-handelsbutik baserad på WordPress  och WooCommerce. 
 Ni skall hitta på ett företag som säljer någon typ av produkter på nätet. Ert  företag har också fysiska butiker.  
 
+## Gruppmedlemmar: 
+* Sanaz Shahed
+* David Wong
+* Angelica Moberg Skoglund
+
+##
+
+
+Påbörjad mockup innan alla fick tillgång till databasen: https://github.com/totaldekadens/wp_mockup_webshop
 
 ### 1. Ni skall bygga ett tema med anpassad design som matchar ert företag och de  produkter ni säljer.  ✅ ❌
 
    - Temat skall vara helt egen-utvecklat.  
 
-### 2. I e-handeln skall det finnas minst 3 produkt-kategorier.  ✅ ❌
+### 2. I e-handeln skall det finnas minst 3 produkt-kategorier.  ✅
 
-### 3. I e-handeln skall det finnas minst 15 separata produkter. ✅ ❌
+### 3. I e-handeln skall det finnas minst 15 separata produkter. ✅ 
    - Minst 5 av produkterna skall vara variabla produkter.  
    - 1 produkt med 5 varianter räknas som 1 produkt 
 
