@@ -1,10 +1,8 @@
 <!-- 
-    Om ingen fil matchas så kommer denna att köras.
+    Den här sidan representerar sidan för en enkild produkt.
 -->
 
-
-<?php echo "index"; ?>
-
+<?php echo "single"; ?>
 
 <?php get_header(); ?>
 

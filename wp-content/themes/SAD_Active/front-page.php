@@ -1,10 +1,8 @@
 <!-- 
-    Om ingen fil matchas så kommer denna att köras.
--->
+    Den här filen representerar startsidan för webbutiken.
+ -->
 
-
-<?php echo "index"; ?>
-
+<?php echo "front-page"; ?>
 
 <?php get_header(); ?>
 

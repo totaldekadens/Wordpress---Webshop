@@ -1,10 +1,8 @@
 <!-- 
-    Om ingen fil matchas så kommer denna att köras.
+    Den här sidan representera inläggsidan för bloggen.
 -->
 
-
-<?php echo "index"; ?>
-
+<?php echo "home"; ?>
 
 <?php get_header(); ?>
 
