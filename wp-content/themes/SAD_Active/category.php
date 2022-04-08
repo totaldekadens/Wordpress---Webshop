@@ -1,10 +1,8 @@
 <!-- 
-    Om ingen fil matchas så kommer denna att köras.
--->
+    Den här filen representerar blogginläggskategorier. Alltså inte produktkategorier -> Gå till page.php då istället.
+ -->
 
-
-<?php echo "index"; ?>
-
+<?php echo "category"; ?>
 
 <?php get_header(); ?>
 

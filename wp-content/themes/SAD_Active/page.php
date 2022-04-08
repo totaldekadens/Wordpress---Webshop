@@ -1,10 +1,8 @@
 <!-- 
-    Om ingen fil matchas så kommer denna att köras.
+    Den här sidan representerar just nu kategorisidan för produkterna.
 -->
 
-
-<?php echo "index"; ?>
-
+<?php echo "page"; ?>
 
 <?php get_header(); ?>
 
