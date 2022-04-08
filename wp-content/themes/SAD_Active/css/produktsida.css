@@ -1,0 +1,151 @@
+/* Hej */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+
+}
+/*----Bread crumbs---- */
+.breadCrumbs{
+    display: flex;
+    flex-direction: row;
+    gap:20px;
+}
+
+.back, .shoePage{
+    text-decoration: none;
+    color:inherit;
+    font-size: 20px;
+}
+
+/* -----PRODUCT STUFF------ */
+.productCon{
+    display:flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content:center;
+}
+.productAttCon{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    margin: 30px;
+    align-items: flex-start;
+    width: 500px;
+}
+.productSwiper{
+    display: flex;
+    width: 800px;
+    height: 450px;
+    background-color: rgb(248, 248, 248);
+    margin:30px;
+}
+
+.productPicCon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.productPic{
+    
+    width: 70%;
+
+}
+
+.productLogo{
+    width: 30px;
+}
+.productTitle{
+    font-size: 30px;
+    font-weight: bold;
+
+}
+.seperator{
+    height:1px;
+    width:500px ;
+    background-color:rgba(0, 0, 0, 0.199) ;
+}
+.productDescript{
+    font-size: 15px;
+}
+
+
+#sizeSelector{
+    display: flex;
+    width: 500px;
+    padding: 10px;
+    border:1px solid rgba(0, 0, 0, 0.096);
+    height: 40px;
+    border-radius: 50px;
+}
+.addToCartBtn{
+    border-style:none;
+    border-radius: 50px;
+    height: 40px;
+    width: 500px;
+    color: #FFF;
+    font-weight: bolder;
+    background-color: #F06AA4;
+    cursor: pointer;
+    
+}
+.addToCartBtn:hover{
+    background-color: #ee88b4;
+    color:#662d46;
+}
+
+.relateTitle{
+    margin: 10px 10px 20px 85px;
+}
+
+.relateSwiperCon{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height:420px;
+    gap:30px;
+}
+.relatePicCon{
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    background-color: rgb(248, 248, 248);
+    width: 240px;
+    position:relative;
+
+}
+
+.relSwiPic{
+    object-fit: contain;
+    width: 100%;
+}
+#swiperArrowLeft{
+    position: absolute;
+    font-size: 50px;
+    display: flex;
+    left: 0;
+    margin:5px;
+    color:#F06AA4;    
+    cursor: pointer;
+}
+#swiperArrowRight{
+    position: absolute;
+    font-size: 50px;
+    display: flex;
+    right: 0;
+    margin: 5px;
+    color:#F06AA4;
+    cursor: pointer;
+}
+#swiperArrowRight:hover, #swiperArrowLeft:hover{
+    color: #ee88b4;
+}
