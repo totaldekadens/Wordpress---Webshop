@@ -57,7 +57,7 @@ Påbörjad mockup innan alla fick tillgång till databasen: https://github.com/t
 
 HJ: Tillägg ok.
 
-### 9. Ni skall ställa in så att e-handeln har moms enligt svenska regler. ✅ ❌
+### 9. Ni skall ställa in så att e-handeln har moms enligt svenska regler. ✅ 
 
 ### 10. Kunden skall kunna registrera sig på webbplatsen och använda de mina sidor funktioner som följer med WooCommerce.  ✅ ❌
    - De skall kunna byta lösenord  
