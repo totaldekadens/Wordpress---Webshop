@@ -7,6 +7,7 @@ include 'enqueue.php';
 
 // Lägger till olika temasupports
 add_theme_support('post-thumbnails');
+add_theme_support('category-thumbnails');
 add_theme_support('menus'); 
 add_theme_support('widgets'); 
 
@@ -27,16 +28,13 @@ function my_register_sidebars() {
    
     /* Exempel */
     register_sidebar( array(
-        'name' => 'example',
-        'id' => 'example',
+        'name' => 'huvudmeny',
+        'id' => 'huvudmeny',
     ));
 
 }
 
 add_action( 'widgets_init', 'my_register_sidebars' );
-
-
-
 
 
 
