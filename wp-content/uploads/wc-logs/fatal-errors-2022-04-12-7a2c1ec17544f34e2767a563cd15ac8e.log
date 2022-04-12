@@ -1,0 +1,18 @@
+2022-04-12T08:37:34+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in C:\MAMP\htdocs\Wordpress---Webshop\wp-admin\includes\user.php on line 663
+
+2022-04-12T09:08:44+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in C:\MAMP\htdocs\Wordpress---Webshop\wp-includes\class-wp-image-editor-imagick.php on line 778
+
+2022-04-12T09:09:19+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in C:\MAMP\htdocs\Wordpress---Webshop\wp-includes\class-wp-image-editor-imagick.php on line 778
+
+2022-04-12T09:09:19+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in C:\MAMP\htdocs\Wordpress---Webshop\wp-includes\class-wp-image-editor-imagick.php on line 142
+
+2022-04-12T09:09:50+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in C:\MAMP\htdocs\Wordpress---Webshop\wp-includes\class-wp-image-editor-imagick.php on line 778
+
+2022-04-12T09:09:50+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in C:\MAMP\htdocs\Wordpress---Webshop\wp-includes\class-wp-image-editor-imagick.php on line 142
+
+2022-04-12T09:10:21+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in C:\MAMP\htdocs\Wordpress---Webshop\wp-includes\class-wp-image-editor-imagick.php on line 778
+
+2022-04-12T09:10:21+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in C:\MAMP\htdocs\Wordpress---Webshop\wp-includes\class-wp-image-editor-imagick.php on line 142
+
+2022-04-12T09:10:55+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in C:\MAMP\htdocs\Wordpress---Webshop\wp-includes\class-wp-image-editor-imagick.php on line 778
+
