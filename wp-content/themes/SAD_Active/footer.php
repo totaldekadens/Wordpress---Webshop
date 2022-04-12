@@ -4,7 +4,7 @@
 
 <div class="containerLogoFooter">
     <div class="logoSad">
-    <h1>SAD Active</h1>  
+        <?php the_custom_logo() ?>
     </div>
 </div>
 

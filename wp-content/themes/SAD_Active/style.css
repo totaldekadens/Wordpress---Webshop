@@ -18,21 +18,95 @@ body {
 
 
 
-/* Header */
+/* Header -------------------------------*/
 
 header {
     background-color: white;
-    padding: 10px;
+    padding: 0px 10px 10 10px;
     text-align: left;
     color: grey;
     font-style: italic;
   }
 
 
+  /* Header top */
+
+  .headerTop {
+      display: flex;
+      justify-content: center;
+  }
+
+  .logo {
+      width: 200px;
+      height: 45px;
+  }
+
+  .logo a {
+      height: 35px;
+  }
+
+  .logo a img {
+      height: 20px;
+      width: 200px;
+      object-fit: contain;
+      color: black;
+      filter: brightness(0%);
+  }
+
+
+  /* Header navigation */
+
+  .navigationHeader {
+      display: flex;
+  }
+
+.searchbar {
+    display: flex;
+    justify-content: center;
+    flex-grow: 2;
+  }
+
+  .searchbar li {
+      width: 80%;;
+  }
+
+  .headerInfo, .accountAndCart {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+  }
+
+.menu-header-right-container {
+    display: flex;
+
+}
+
+.menu-header-right-container ul {
+    display: flex;
+    gap: 10px;
+    
+}
+
+  ul {
+      list-style: none;
+  }
+
+  li {
+      list-style: none;
+  }
+
+  .widgettitle {
+      display: none;
+  }
 
 
 
-/* Footer */
+
+
+
+
+
+/* Footer -------------------------------- */
 
 footer {
     display: flex;
@@ -47,23 +121,30 @@ footer {
     margin-top: 30px;
     display: flex;
     width: 100%;
-    font-family: 'Righteous', cursive;
     justify-content: center;
-    color: rgb(255, 251, 247);
-    font-size: 100px;
-}
-
-.containerLogoFooter h1 {
-    margin: 0px;
 }
 
 .logoSad {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+}
+
+.logoSad a {
+    display: flex;
+    justify-content: center;
+}
+
+.logoSad a img {
+    width: 90%;
+    height: auto;
+    object-fit: contain;
+    opacity: 20%;
 }
 
 .footerInfo {
-    background-color: rgb(255, 251, 247);
+    background-color: rgba(248, 173, 211, 0.2);
     display: flex;
     justify-content: space-around;
     padding-bottom: 50px;

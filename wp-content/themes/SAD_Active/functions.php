@@ -10,6 +10,7 @@ add_theme_support('post-thumbnails');
 add_theme_support('category-thumbnails');
 add_theme_support('menus'); 
 add_theme_support('widgets'); 
+add_theme_support('custom-logo');
 
 
 
@@ -17,6 +18,8 @@ add_theme_support('widgets');
 function registrera_meny() {
 
     register_nav_menu('huvudmeny', 'Huvudmeny');
+    register_nav_menu('header-right', 'header-right');
+    register_nav_menu('header-left', 'header-left');
 
 }
 
@@ -30,6 +33,21 @@ function my_register_sidebars() {
     register_sidebar( array(
         'name' => 'huvudmeny',
         'id' => 'huvudmeny',
+    ));
+
+    register_sidebar( array( 
+        'name' => 'searchbar',
+        'id' => 'searchbar',
+    ));
+
+    register_sidebar( array( 
+        'name' => 'header-right',
+        'id' => 'header-right',
+    ));
+
+    register_sidebar( array( 
+        'name' => 'header-left',
+        'id' => 'header-left',
     ));
 
 }
