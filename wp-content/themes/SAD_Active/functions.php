@@ -20,7 +20,11 @@ function registrera_meny() {
     register_nav_menu('huvudmeny', 'Huvudmeny');
     register_nav_menu('header-right', 'header-right');
     register_nav_menu('header-left', 'header-left');
-
+    register_nav_menu('dropdown', 'dropdown');
+    register_nav_menu('dropdown-center-top', 'dropdown-center-top');
+    register_nav_menu('dropdown-center-down', 'dropdown-center-down');
+    register_nav_menu('dropdown-right-top', 'dropdown-right-top');
+    register_nav_menu('dropdown-right-down', 'dropdown-right-down');
 }
 
 add_action('after_setup_theme', 'registrera_meny');
@@ -40,7 +44,7 @@ function my_register_sidebars() {
         'id' => 'searchbar',
     ));
 
-    register_sidebar( array( 
+/*     register_sidebar( array( 
         'name' => 'header-right',
         'id' => 'header-right',
     ));
@@ -48,6 +52,21 @@ function my_register_sidebars() {
     register_sidebar( array( 
         'name' => 'header-left',
         'id' => 'header-left',
+    )); */
+
+    register_sidebar( array( 
+        'name' => 'dropdown-right',
+        'id' => 'dropdown-right',
+    ));
+
+    register_sidebar( array( 
+        'name' => 'dropdown-left',
+        'id' => 'dropdown-left',
+    ));
+
+    register_sidebar( array( 
+        'name' => 'dropdown-center',
+        'id' => 'dropdown-center',
     ));
 
 }

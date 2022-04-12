@@ -23,25 +23,51 @@
 
         <div class="headerInfo">
             <?php 
-            wp_nav_menu(array(
+           /*  wp_nav_menu(array(
                 'theme_location' => 'header-left',
-                )); 
-            ?>
-
+                ));  */
+           ?>
         </div>
         <div class="searchbar">
             <?php dynamic_sidebar('searchbar'); ?>
+
+            <div class="dropMenu">
+                <div class="dropImg" >
+                    <a class="toggle-nav" href="##"><img src="<?php echo get_template_directory_uri(); ?>/assets/dropdown.png" alt="Dropdown-meny"/></a>
+                </div>
+            </div>
         </div>
 
         <div class="accountAndCart">
             <?php 
             wp_nav_menu(array(
                 'theme_location' => 'header-right',
-
             )); 
             ?>
         </div>
 
     </div>
+
+    <div class="dropdownMenu">
+        <div class="catMenu">
+            <?php dynamic_sidebar('dropdown-left'); ?>
+        </div>
+            
+        <h4><?php
+            wp_nav_menu(array(
+                'theme_location' => 'dropdown-center-top',
+            )); ?></h4>
+             
+             <h4><?php
+            wp_nav_menu(array(
+                'theme_location' => 'dropdown-right-top',
+            )); ?></h4>
+
+            <h4><?php
+            wp_nav_menu(array(
+                'theme_location' => 'dropdown-center-down',
+            )); ?></h4>
+
+    </div>
     
-    </header>
+</header>

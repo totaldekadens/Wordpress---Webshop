@@ -60,6 +60,7 @@ header {
       display: flex;
   }
 
+
 .searchbar {
     display: flex;
     justify-content: center;
@@ -67,8 +68,8 @@ header {
   }
 
   .searchbar li {
-      width: 80%;;
-  }
+      width: 500px;
+  } 
 
   .headerInfo, .accountAndCart {
     display: flex;
@@ -99,12 +100,92 @@ header {
       display: none;
   }
 
+/* Dropdown */
+
+.dropMenu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+    padding-bottom: 5px;
+}
+
+.dropImg {
+    width: 35px;
+}
+
+.dropImg img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.dropdownMenu {
+    display: none;
+    position: relative;
+    gap: 20px;
+    width: 100%;
+    justify-content: center;
+    z-index: 9999;
+    /* background-color: rgba(248, 173, 211, 0.2); */
+    box-shadow: 0px 3px 3px rgba(66, 66, 66, 0.2);
+
+}
+
+.dropdownMenu > h4 {
+    margin-top: 6px;
+}
 
 
+.menu-item a {
+    text-decoration: none;
+    color: grey;
+}
 
 
+/* SubCategory */
 
+#block-7 {
+    cursor: pointer;
+}
 
+.catMenu li:nth-child(2) {
+    display: none;
+}
+
+.flex {
+    display: flex;
+}
+
+@media screen and (max-width: 1200px) { 
+
+    .searchbar li {
+        width: 80%;;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .dropdownMenu {
+        flex-direction: column;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .dropdownMenu h4 {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        font-size: 20px;
+    }
+
+    h4 div ul {
+        margin: 0px;
+    }
+
+    .catMenu {
+        padding-left: 40px;
+    }
+
+}
 
 /* Footer -------------------------------- */
 
