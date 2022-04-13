@@ -1,4 +1,18 @@
-let productCard = document.querySelector(".woocommerce-LoopProduct-link")
+
+let dropdownImg = document.querySelector(".dropmenu")
+let subMenuToBeToggled = document.querySelector(".dropdownMenu")
+
+dropdownImg.addEventListener("click", () => {
+
+    subMenuToBeToggled.classList.toggle("flex")
+
+})
+
+
+
+
+
+/* let productCard = document.querySelector(".woocommerce-LoopProduct-link")
 let productInCatImg = document.createElement("div")
 productInCatImg.classList.add("productInCatImg")
 
@@ -22,3 +36,5 @@ productPriceAmount.classList.add("productPriceAmount")
 productCard.append(productInCatImg, productInCatInfo )
 productInCatImg.append(productImage)
 productInCatInfo.append(productTitleCat, productPriceCat, productPriceAmount ) 
+
+ */
