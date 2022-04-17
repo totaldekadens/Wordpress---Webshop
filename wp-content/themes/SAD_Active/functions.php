@@ -11,6 +11,7 @@ add_theme_support('category-thumbnails');
 add_theme_support('menus'); 
 add_theme_support('widgets'); 
 add_theme_support('custom-logo');
+add_theme_support('woocommerce');
 
 
 

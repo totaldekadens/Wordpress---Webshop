@@ -6,18 +6,47 @@
 
 <?php get_header(); ?>
 
-<main>
+<main class="flex column">
 
-    <?php
-    while (have_posts()) {
-        the_post(); ?>
-        <?php the_post_thumbnail(null, ['class' => 'img-responsive responsive--full', 'title' => 'Feature image'] );?>
-        
-        <h1><?php the_title(); ?></h1>
-        <?php the_content(); ?>
-        
-    <?php } ?>
+<div class="titlePage"><h1>Magazine</h1></div> <!-- Hämta Titel på sidan -->
+<div class="contentPost flex column center">
+<?php 
 
+while (have_posts()) {
+    the_post();?>
+
+    <div class="date flex"><p>Datum: <?php the_time(get_option('date_format'));  ?></p></div>
+    <div class="post flex">
+        <div class="postPic">
+            <?php 
+            the_post_thumbnail();
+            ?>
+        </div>
+        <div class="bread">
+
+            <div class="title">
+                <a href="<?php the_permalink(); ?>">
+                    <h3>
+                        <?php the_title(); ?>
+                    </h3>
+                </a>
+            </div>
+            <div class="text">
+                        <p><?php echo wp_trim_excerpt();  ?></p>
+            </div>
+        </div>
+    </div>
+<?php } ?>
+    </div>
+
+    <?php 
+the_posts_pagination( array(
+    'mid_size'  => 2,
+    'prev_text' => __( 'Föregående'),
+    'next_text' => __( 'Nästa' ),
+    'class' => 'pagination',
+) ); 
+?>
 </main>
 
 <?php get_footer(); ?>

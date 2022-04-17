@@ -1,0 +1,151 @@
+/* 
+
+css till single.php - dvs enstaka blogginlägg
+
+*/
+
+
+main {
+    flex-direction: column;
+    margin-top: 90px;
+    align-items: center;
+}
+
+.titleAndDate {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 30px;
+    gap: 20px;
+}
+
+
+.postPic {
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+
+}
+
+.postPic img {
+    height: 100%;
+    object-fit: contain;
+}
+
+.contentPost {
+    width: 60vw;
+    margin-bottom: 100px;
+}
+
+.post {
+    gap: 20px;
+    align-items: center;
+}
+
+/* .back {
+    width: 100%;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.back img {
+    width: 30px;
+    object-fit: contain;
+} */
+
+/* footer {
+    position: relative;
+}
+
+.direction {
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.next, .previous {
+    width: 70px;
+}
+
+.next img, .previous img {
+    width: 100%;
+    object-fit: contain;
+} */
+
+.title h1 {
+    color: #5d5c61c9;
+}
+
+/* .gubbe {
+    width: 50px;
+    margin-top: 5px;
+}
+
+.gubbe img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.sign {
+    width: 90%;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+    margin-top: 20px;
+ }
+ 
+ .sign img {
+     width: 180px;
+     object-fit: contain;
+ } */
+
+ @media screen and (max-width: 1000px) { 
+
+    /* .sign img {
+        width: 120px;
+    } */
+
+ }
+
+@media screen and (max-width: 600px) { 
+
+    .contentPost {
+        width: 80vw;
+    }
+
+    .title h1 {
+        font-size: 21px;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+
+    
+    }
+
+@media screen and (max-width: 500px) { 
+
+main {
+    margin-top: 90px;
+}
+
+/* .gubbe {
+    width: 40px;
+
+} */
+
+.contentPost {
+    margin-bottom: 60px;
+}
+
+}
+
+@media screen and (max-width: 400px) { 
+
+    .back a p {
+        font-size: 12px;
+    }
+    
+    
+    }
