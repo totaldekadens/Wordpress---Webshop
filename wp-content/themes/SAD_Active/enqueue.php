@@ -11,6 +11,8 @@ $uri = get_theme_file_uri();
  wp_register_style('productCategory', $uri . '/css/productCategory.css');
  wp_register_style('produktsida', $uri . '/css/produktsida.css');
  wp_register_style('frontPage', $uri . '/css/frontPage.css');
+ wp_register_style('home', $uri . '/css/home.css');
+ wp_register_style('single', $uri . '/css/single.css');
 
 // Registrerar script-filer.
 wp_register_script('logic', $uri . '/js/logic.js', [], false, true );
@@ -40,6 +42,7 @@ if(is_page() && !is_front_page()) {
 else if (is_single()) {
     wp_enqueue_style('produktsida');
     wp_enqueue_script('product');
+    wp_enqueue_style('single'); // enstaka blogginlägg
 } 
 
 // Är man på "front-page.php" då körs dessa filer
@@ -47,7 +50,12 @@ else if (is_front_page()) {
     wp_enqueue_script('logic');
     wp_enqueue_style('frontPage');
 }
+else if(is_home()) {
 
+    wp_enqueue_style('home');
+    wp_enqueue_script('logic');
+
+}
 
 }
 

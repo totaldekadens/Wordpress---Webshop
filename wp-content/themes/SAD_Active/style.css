@@ -16,6 +16,30 @@ body {
     margin: 0px;
 }
 
+.flex {
+    display: flex;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.center {
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.none {
+    display: none;
+}
+
+.block {
+    display: block;
+}
+
+
+
 
 
 /* Header -------------------------------*/
@@ -184,6 +208,41 @@ header {
     .catMenu {
         padding-left: 40px;
     }
+
+}
+
+
+/* Pagination --------------------------*/
+
+.pagination, .nav-links {
+	margin: 30px 0 30px;
+	text-align: center;
+	width: 100%;
+}
+
+	.pagination h2 {
+		display: none;
+	}
+
+	.nav-links > .page-numbers {
+		background-color: rgb(0, 0, 0);
+		color: white;
+		display: inline-block;
+		margin: 0 5px;
+		padding: 5px 10px;
+        border-radius: 5px;
+	}
+
+		.nav-links > .page-numbers.current {
+			background-color: white;
+			color: rgb(0, 0, 0);
+		}
+
+@media ( max-width: 768px ) {
+
+.pagination {
+	margin-bottom: 30px;
+}
 
 }
 

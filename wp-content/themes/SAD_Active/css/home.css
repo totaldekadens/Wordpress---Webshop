@@ -1,0 +1,124 @@
+
+
+/* postCollection starts here */
+
+
+main {
+    margin-top: 100px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.titlePage {
+
+    margin-bottom: 50px;
+
+}
+
+.postPic {
+    display: flex;
+    width: 400px;
+}
+
+.postPic img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.contentPost {
+    width: 90%;
+    margin-bottom: 40px;
+}
+
+.bread {
+    width: 80%;
+}
+.post {
+    gap: 20px;
+    padding-bottom: 10px;
+    width: 90%;
+    height: 20vh;
+}
+
+.text p {
+line-height: 16px;
+max-height: 32px;
+font-size: 15px;
+display: -webkit-box;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 2;
+overflow: hidden;
+}
+
+.date {
+    width: 100%;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.date p {
+    margin: 0px;
+    font-size: 15px;
+}
+
+.title a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.727);
+
+}
+
+.title a h3 {
+    margin-top: 10px;
+    font-size: 25px;
+
+}
+
+@media screen and (max-width: 800px) { 
+
+
+    .contentPost {
+        width: 100%;
+    }
+
+    .post {
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+        width: 100%;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid rgba(153, 148, 119, 0.205);
+    }
+
+    .postPic {
+        width: 90%;
+        max-height: 70vh;
+    }
+
+    main {
+        margin-top: 70px;
+    }
+
+    .title a h3 {
+        font-size: 20px;
+    } 
+
+    .date {
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+    
+
+}
+
+@media screen and (max-width: 400px) { 
+    
+    .text p {
+        font-size: 10px;
+        }
+
+        .title a h3 {
+            font-size: 16px;
+        } 
+}
