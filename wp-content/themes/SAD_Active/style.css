@@ -49,7 +49,7 @@ header {
     padding: 0px 10px 10 10px;
     text-align: left;
     color: grey;
-    font-style: italic;
+    /* font-style: italic; */
   }
 
 
@@ -77,11 +77,16 @@ header {
       filter: brightness(0%);
   }
 
+  #menu-header-right {
+      padding-right: 30px;
+  }
+
 
   /* Header navigation */
 
   .navigationHeader {
       display: flex;
+      align-items: center;
   }
 
 
@@ -98,7 +103,8 @@ header {
   .headerInfo, .accountAndCart {
     display: flex;
     justify-content: center;
-    flex-grow: 1;
+    align-items: center;
+    /* flex-grow: 1; */
   }
 
 .menu-header-right-container {
@@ -126,6 +132,8 @@ header {
 
 /* Dropdown */
 
+
+
 .dropMenu {
     display: flex;
     justify-content: center;
@@ -135,22 +143,25 @@ header {
 }
 
 .dropImg {
+    display: none;
     width: 35px;
+    height: 40px;
 }
 
 .dropImg img {
-    width: 100%;
+    height: 100%;
     object-fit: contain;
+    opacity: 50%;
 }
 
 .dropdownMenu {
-    display: none;
+    display: flex;
     position: relative;
     gap: 20px;
     width: 100%;
     justify-content: center;
+    align-items: center;
     z-index: 9999;
-    /* background-color: rgba(248, 173, 211, 0.2); */
     box-shadow: 0px 3px 3px rgba(66, 66, 66, 0.2);
 
 }
@@ -165,6 +176,35 @@ header {
     color: grey;
 }
 
+.catMenu, .catMenuRight {
+    display: flex;
+    justify-content: center;
+}
+
+
+.menu-dropdown-left-top-container, .menu-dropdown-right-top-container {
+    display: flex;
+    justify-content: center;
+}
+
+.menu-dropdown-left-top-container ul, .menu-dropdown-right-top-container ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.line {
+    height: 30px;
+    width: 1px;
+    background-color: bisque;
+}
+
+
+ul {
+
+    padding-inline-start: 0px;
+}
+
 
 /* SubCategory */
 
@@ -172,9 +212,9 @@ header {
     cursor: pointer;
 }
 
-.catMenu li:nth-child(2) {
+/* .catMenu li:nth-child(2) {
     display: none;
-}
+} */
 
 .flex {
     display: flex;
@@ -189,6 +229,20 @@ header {
 }
 
 @media screen and (max-width: 600px) {
+   
+    .dropdownMenu {
+        display: none;
+    }
+
+    .flex {
+        display: flex;
+    }
+   
+   
+    .dropImg {
+        display: block;
+    }
+    
     .dropdownMenu {
         flex-direction: column;
         padding-top: 20px;
@@ -205,8 +259,19 @@ header {
         margin: 0px;
     }
 
-    .catMenu {
-        padding-left: 40px;
+    .catMenu, .catMenuRight {
+        flex-direction: column;
+    }
+
+    .menu-dropdown-left-top-container ul, .menu-dropdown-right-top-container ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .line {
+        width:80px;
+        height: 1px;
+
     }
 
 }
