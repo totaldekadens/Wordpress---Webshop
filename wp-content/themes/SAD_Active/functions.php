@@ -25,6 +25,7 @@ function registrera_meny() {
     register_nav_menu('dropdown-center-top', 'dropdown-center-top');
     register_nav_menu('dropdown-center-down', 'dropdown-center-down');
     register_nav_menu('dropdown-right-top', 'dropdown-right-top');
+    register_nav_menu('dropdown-left-top', 'dropdown-left-top');
     register_nav_menu('dropdown-right-down', 'dropdown-right-down');
 }
 
