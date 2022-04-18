@@ -1,0 +1,18 @@
+2022-04-18T14:26:55+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in C:\MAMP\htdocs\Wordpress---Webshop\wp-includes\Requests\IDNAEncoder.php on line 388
+
+2022-04-18T14:37:01+00:00 CRITICAL syntax error, unexpected '''' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in C:\MAMP\htdocs\Wordpress---Webshop\wp-content\themes\SAD_Active\functions.php on line 77
+
+2022-04-18T14:38:01+00:00 CRITICAL syntax error, unexpected '''' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in C:\MAMP\htdocs\Wordpress---Webshop\wp-content\themes\SAD_Active\functions.php on line 77
+
+2022-04-18T16:20:20+00:00 CRITICAL syntax error, unexpected ':', expecting end of file in C:\MAMP\htdocs\Wordpress---Webshop\wp-content\themes\SAD_Active\single-product.php on line 8
+
+2022-04-18T16:39:28+00:00 CRITICAL Uncaught Error: Call to undefined function have_post() in C:\MAMP\htdocs\Wordpress---Webshop\wp-content\themes\SAD_Active\single-product.php:5
+Stack trace:
+#0 C:\MAMP\htdocs\Wordpress---Webshop\wp-includes\template-loader.php(106): include()
+#1 C:\MAMP\htdocs\Wordpress---Webshop\wp-blog-header.php(19): require_once('C:\\MAMP\\htdocs\\...')
+#2 C:\MAMP\htdocs\Wordpress---Webshop\index.php(17): require('C:\\MAMP\\htdocs\\...')
+#3 {main}
+  thrown in C:\MAMP\htdocs\Wordpress---Webshop\wp-content\themes\SAD_Active\single-product.php on line 5
+
+2022-04-18T16:57:02+00:00 CRITICAL Out of memory (allocated 10485760) (tried to allocate 32768 bytes) in C:\MAMP\htdocs\Wordpress---Webshop\wp-content\plugins\wp-migrate-db\vendor\php-di\php-di\src\DI\FactoryInterface.php on line 1
+

@@ -11,16 +11,10 @@
 <div class="footerInfo">
 
     <div class="FAQ">
-        <h2>Hjälp & Info</h2>
-        <div>0736125411</div>
-        <div>FAQ</div>
-        <div>Om oss</div>
+        <?php dynamic_sidebar('footerSidebar1');?>
     </div>
     <div class="social">
-        <h2>Social Media</h2>
-        <div>Facebook</div>
-        <div>Instagram</div>
-        <div>Linkedin</div>
+        <?php dynamic_sidebar('footerSidebar2');?>
     </div>
 
 
