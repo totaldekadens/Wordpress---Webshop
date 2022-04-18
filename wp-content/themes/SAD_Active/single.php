@@ -28,6 +28,11 @@ while (have_posts()) {
                 </div>
             </div>
 <?php } ?>
-
 </main>
+
+<div class="singlePagination">
+    <div class="prevPag"><?php previous_post_link('<strong>%link</strong>', '<<'); ?></div>
+    <div class="nextPag"><?php next_post_link('<strong>%link</strong>', '>>'); ?></div>
+</div>
+
 <?php get_footer(); ?>
