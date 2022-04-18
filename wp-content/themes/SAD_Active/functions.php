@@ -70,6 +70,18 @@ function my_register_sidebars() {
         'name' => 'dropdown-center',
         'id' => 'dropdown-center',
     ));
+    
+    // footer
+    register_sidebar( array(
+        'name' => 'footerSidebar1',
+        'id' => 'footerSidebar1',
+        'description' => 'help and info'
+    ));
+    register_sidebar( array(
+        'name' => 'footerSidebar2',
+        'id' => 'footerSidebar2',
+        'description' => 'socialmedia',
+    ));
 
 }
 
