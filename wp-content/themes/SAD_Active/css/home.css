@@ -4,7 +4,7 @@
 
 
 main {
-    margin-top: 100px;
+    padding-top: 50px;
     align-items: center;
     justify-content: flex-start;
     flex-direction: column;
@@ -94,10 +94,6 @@ overflow: hidden;
     .postPic {
         width: 90%;
         max-height: 70vh;
-    }
-
-    main {
-        margin-top: 70px;
     }
 
     .title a h3 {

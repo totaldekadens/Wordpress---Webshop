@@ -38,6 +38,10 @@ body {
     display: block;
 }
 
+main {
+    margin-top: 155px;
+}
+
 
 
 
@@ -46,10 +50,13 @@ body {
 
 header {
     background-color: white;
-    padding: 0px 10px 10 10px;
-    text-align: left;
-    color: grey;
-    /* font-style: italic; */
+    padding: 0px 10px 0px 10px;
+    text-align: left;     
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0; 
+    z-index: 99999;
   }
 
 
@@ -58,6 +65,7 @@ header {
   .headerTop {
       display: flex;
       justify-content: center;
+      padding-top: 20px;
   }
 
   .logo {
@@ -176,6 +184,10 @@ header {
     color: grey;
 }
 
+.menu-item a:hover {
+    color: rgb(74, 74, 74);
+}
+
 .catMenu, .catMenuRight {
     display: flex;
     justify-content: center;
@@ -229,6 +241,10 @@ ul {
 }
 
 @media screen and (max-width: 600px) {
+
+    main {
+        margin-top: 100px;
+    }
    
     .dropdownMenu {
         display: none;
@@ -290,8 +306,9 @@ ul {
 	}
 
 	.nav-links > .page-numbers {
-		background-color: rgb(0, 0, 0);
-		color: white;
+		background-color: white;
+        box-shadow: 0px 0px 2px rgb(177, 177, 177);
+		color: grey;
 		display: inline-block;
 		margin: 0 5px;
 		padding: 5px 10px;
@@ -299,8 +316,8 @@ ul {
 	}
 
 		.nav-links > .page-numbers.current {
-			background-color: white;
-			color: rgb(0, 0, 0);
+			background-color: rgb(227, 227, 227);
+			color: grey;
 		}
 
 @media ( max-width: 768px ) {
