@@ -8,10 +8,13 @@
 
 <main class="flex column">
 
+
 <?php 
 
 while (have_posts()) {
     the_post();?>
+
+    
 
     <div class="contentPost flex column">
             <div class="post flex column">

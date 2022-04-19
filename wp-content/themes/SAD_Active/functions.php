@@ -89,6 +89,85 @@ add_action( 'widgets_init', 'my_register_sidebars' );
 
 
 
+// Hookar
 
+function newSettingsHooks() {
+    
+    add_action( 'storefront_header', 'headerContainerLogo', 1 );
+    add_action( 'storefront_header', 'headerContainerLogoClose', 3 );
+    remove_action('woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart', 10);
+
+    if(is_product_category()) {
+
+        remove_action('woocommerce_before_shop_loop', 'woocommerce_result_count', 20 );
+        remove_action('woocommerce_after_shop_loop', 'woocommerce_result_count', 20 );
+        remove_action('woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 10 );
+        remove_action('woocommerce_after_shop_loop', 'woocommerce_catalog_ordering', 10 );
+      
+    }
+    
+}
+
+add_action('wp', 'newSettingsHooks');
+
+
+
+// Lägger till nya taggar i header
+
+if ( ! function_exists('headerContainerLogo') ) {
+
+
+	function headerContainerLogo() {
+		 echo '<div class="headerContainerLogo">';
+	}
+
+}
+
+if ( ! function_exists('headerContainerLogoClose') ) {
+
+
+	function headerContainerLogoClose() {
+		 echo '</div>';
+	}
+
+}
+
+
+
+
+// om man är på kassasidan. Ta bort header, footer och olika fält 
+
+function removeStorefront() {
+
+    if(is_checkout()) {
+
+        remove_all_actions('storefront_header'); // TA bort allt i headern
+        remove_all_actions('storefront_footer'); // TA bort allt i footern
+        remove_action('storefront_before_content', 'woocommerce_breadcrumb', 10);  // Ta bort breadcrumbs 
+        remove_action('woocommerce_before_checkout_form', 'woocommerce_checkout_coupon_form', 10 ); // Ta bort rabattkoden däruppe
+
+        add_action('woocommerce_after_checkout_form', 'woocommerce_checkout_coupon_form', 10 ); // Lägger till rabattkoden där nere istället
+        
+
+        // Ta bort fält i checkout
+        add_filter('woocommerce_checkout_fields', 'ams_overwrite_checkout_fields');
+
+        function ams_overwrite_checkout_fields($fields) {
+
+            unset(
+                $fields['order']['order_comments'], // Tar bort orderkommentarer / Anteckningar (valfritt)
+                $fields['billing']['billing_address_2'],  // Tar bort addressrad 2
+                $fields['shipping']['shipping_address_2'],
+                $fields['shipping']['shipping_company'],  
+                $fields['billing']['billing_company'], // Tar bort Företagsnamn (valfritt)
+            );
+
+            return $fields;
+
+        }
+    }
+}
+
+add_action('wp', 'removeStorefront');
 
 ?>
