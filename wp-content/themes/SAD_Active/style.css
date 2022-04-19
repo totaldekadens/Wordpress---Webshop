@@ -376,7 +376,7 @@ ul.products li.product img, ul.products .wc-block-grid__product img, .wc-block-g
 
 .widget_shopping_cart_content, .woocommerce-mini-cart__total  {
 
-    background-color: rgba(248, 173, 211, 0.2);
+   /*  background-color: rgba(248, 173, 211, 0.2); */
 }
 
 /* Footer -------------------------------- */
