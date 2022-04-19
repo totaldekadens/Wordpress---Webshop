@@ -1,5 +1,6 @@
 /*
 Theme Name: SAD Active
+Template: storefront
 Author: David, Sanaz och Angelica
 Version: 1.0
 */
@@ -38,12 +39,14 @@ body {
     display: block;
 }
 
-main {
+/* main {
     margin-top: 155px;
+} */
+
+
+.site-main {
+    margin-top: 0px;
 }
-
-
-
 
 
 /* Header -------------------------------*/
@@ -394,4 +397,12 @@ h2 {
     text-decoration: none;
     color:inherit;
     font-weight: bold;
+}
+
+.none {
+    display: none;
+}
+
+.flex {
+    display: flex;
 }
