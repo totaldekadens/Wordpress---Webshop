@@ -23,7 +23,7 @@ while (have_posts()) {
             ?>
         </div>
         <div class="bread">
-
+        <!-- <div class="date flex"><p>Datum: <?php the_time(get_option('date_format'));  ?></p></div> -->
             <div class="title">
                 <a href="<?php the_permalink(); ?>">
                     <h3>

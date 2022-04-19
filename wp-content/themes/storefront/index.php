@@ -11,6 +11,8 @@
  * @package storefront
  */
 
+echo "index-page";
+
 get_header(); ?>
 
 	<div id="primary" class="content-area">

@@ -10,6 +10,10 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<?php
+
+
+	echo "storefront-content-single";
+
 	do_action( 'storefront_single_post_top' );
 
 	/**
