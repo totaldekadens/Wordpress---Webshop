@@ -300,13 +300,13 @@ if ( ! function_exists( 'storefront_skip_links' ) ) {
 	}
 }
 
-if ( ! function_exists( 'storefront_homepage_header' ) ) {
+/* if ( ! function_exists( 'storefront_homepage_header' ) ) {
 	/**
 	 * Display the page header without the featured image
 	 *
 	 * @since 1.0.0
 	 */
-	function storefront_homepage_header() {
+	/* function storefront_homepage_header() {
 		edit_post_link( __( 'Edit this section', 'storefront' ), '', '', '', 'button storefront-hero__button-edit' );
 		?>
 		<header class="entry-header">
@@ -316,15 +316,15 @@ if ( ! function_exists( 'storefront_homepage_header' ) ) {
 		</header><!-- .entry-header -->
 		<?php
 	}
-}
+} */ 
 
-if ( ! function_exists( 'storefront_page_header' ) ) {
+/* if ( ! function_exists( 'storefront_page_header' ) ) {
 	/**
 	 * Display the page header
 	 *
 	 * @since 1.0.0
 	 */
-	function storefront_page_header() {
+	/* function storefront_page_header() {
 		if ( is_front_page() && is_page_template( 'template-fullwidth.php' ) ) {
 			return;
 		}
@@ -337,8 +337,8 @@ if ( ! function_exists( 'storefront_page_header' ) ) {
 			?>
 		</header><!-- .entry-header -->
 		<?php
-	}
-}
+	} 
+} */
 
 if ( ! function_exists( 'storefront_page_content' ) ) {
 	/**
@@ -624,11 +624,11 @@ if ( ! function_exists( 'storefront_social_icons' ) ) {
 	 * @since 1.0.0
 	 */
 	function storefront_social_icons() {
-		if ( class_exists( 'Subscribe_And_Connect' ) ) {
+		/* if ( class_exists( 'Subscribe_And_Connect' ) ) {
 			echo '<div class="subscribe-and-connect-connect">';
 			subscribe_and_connect_connect();
 			echo '</div>';
-		}
+		} */
 	}
 }
 
@@ -696,3 +696,25 @@ if ( ! function_exists( 'storefront_header_container_close' ) ) {
 		echo '</div>';
 	}
 }
+
+
+/* Nya funktioner */
+
+if ( ! function_exists('headerContainerLogo') ) {
+
+
+	function headerContainerLogo() {
+		 echo '<div class="headerContainerLogo">';
+	}
+
+}
+
+if ( ! function_exists('headerContainerLogoClose') ) {
+
+
+	function headerContainerLogoClose() {
+		 echo '</div>';
+	}
+
+}
+

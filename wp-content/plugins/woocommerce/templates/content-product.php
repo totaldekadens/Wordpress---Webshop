@@ -60,7 +60,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	 * Hook: woocommerce_after_shop_loop_item.
 	 *
 	 * @hooked woocommerce_template_loop_product_link_close - 5
-	 * @hooked woocommerce_template_loop_add_to_cart - 10
+	 * @hooked woocommerce_template_loop_add_to_cart - 10  // Borttagen
 	 */
 	do_action( 'woocommerce_after_shop_loop_item' );
 	?>

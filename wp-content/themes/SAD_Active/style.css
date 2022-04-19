@@ -51,6 +51,19 @@ body {
 
 /* Header -------------------------------*/
 
+
+/* Searchbar */
+
+.search-field {
+    border-radius: 5px;
+    
+}
+
+input[type=search] {
+    background-color: rgba(248, 173, 211, 0.2);
+}
+
+
 header {
     background-color: white;
     padding: 0px 10px 0px 10px;
@@ -329,6 +342,41 @@ ul {
 	margin-bottom: 30px;
 }
 
+}
+
+
+
+/* Produkter på samlingssidor */
+
+ul.products li.product .woocommerce-LoopProduct-link, ul.products .wc-block-grid__product .woocommerce-LoopProduct-link, .wc-block-grid__products li.product .woocommerce-LoopProduct-link, .wc-block-grid__products .wc-block-grid__product .woocommerce-LoopProduct-link {
+height: 30vh;
+margin-bottom: 155px;
+}
+
+ul.products li.product img, ul.products .wc-block-grid__product img, .wc-block-grid__products li.product img, .wc-block-grid__products .wc-block-grid__product img {
+    display: block;
+    margin: 0 auto 1.618em;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+/* Breadcrumbs */
+
+.storefront-breadcrumb {
+    margin-bottom: 0px;
+}
+
+
+/* Mini shopcart */
+
+/* .site-header-cart .widget_shopping_cart {
+    background-color: rgba(248, 173, 211, 0.2);
+} */
+
+.widget_shopping_cart_content, .woocommerce-mini-cart__total  {
+
+    background-color: rgba(248, 173, 211, 0.2);
 }
 
 /* Footer -------------------------------- */
