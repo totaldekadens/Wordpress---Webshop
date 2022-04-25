@@ -10,7 +10,6 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php
 
-	echo "storefront-content-page";
 	/**
 	 * Functions hooked in to storefront_page add_action
 	 *

@@ -9,8 +9,6 @@
  *
  * @package storefront
  */
-echo "storefront-page";
-
 get_header(); ?>
 
 	<div id="primary" class="content-area">

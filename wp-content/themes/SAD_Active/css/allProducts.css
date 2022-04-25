@@ -1,0 +1,11 @@
+.wp-block-image {
+    width: 100%;
+}
+
+.wp-block-image img { 
+    width: 100%;
+    object-fit: cover;
+}
+
+
+
