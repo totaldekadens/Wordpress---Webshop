@@ -67,6 +67,12 @@ function my_register_sidebars() {
         'id' => 'usp',
         'description' => 'usp',
     ));
+    register_sidebar( array(
+        'name' => 'searchbar',
+        'id' => 'searchbar',
+        'description' => 'searchbar',
+    ));
+
 
 }
 
