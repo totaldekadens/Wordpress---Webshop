@@ -2,8 +2,6 @@
     Den här sidan representera inläggsidan för bloggen.
 -->
 
-<?php echo "home"; ?>
-
 <?php get_header(); ?>
 
 <main class="flex column">

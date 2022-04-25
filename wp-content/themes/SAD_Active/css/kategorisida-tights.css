@@ -1,0 +1,11 @@
+.wp-block-image{
+    background-color: rgb(162,146,137);
+}
+
+@media screen and (max-width:1036px) {
+
+    .wp-block-image {
+        background-color:white
+    }
+
+}

@@ -239,14 +239,27 @@ if ( ! function_exists( 'storefront_primary_navigation' ) ) {
 	function storefront_primary_navigation() {
 		?>
 		<nav id="site-navigation" class="main-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Primary Navigation', 'storefront' ); ?>">
-		<button class="menu-toggle" aria-controls="site-navigation" aria-expanded="false"><span><?php echo esc_html( apply_filters( 'storefront_menu_toggle_text', __( 'Menu', 'storefront' ) ) ); ?></span></button>
+		<button class="menu-toggle" aria-controls="site-navigation" aria-expanded="false"><span><?php echo esc_html( apply_filters( 'storefront_menu_toggle_text', __( '', 'storefront' ) ) ); ?></span></button>
 			<?php
-			wp_nav_menu(
-				array(
-					'theme_location'  => 'primary',
-					'container_class' => 'primary-navigation',
-				)
-			);
+			?><div class="hej"><?php 
+
+				wp_nav_menu(
+					array(
+						'theme_location'  => 'header-store-left',
+						'container_class' => 'header-store-left',
+					)
+				);
+
+				?><div class="line"></div><?php 
+
+				wp_nav_menu(
+					array(
+						'theme_location'  => 'header-store-right',
+						'container_class' => 'header-store-right',
+					)
+				);
+			
+			?></div><?php
 
 			wp_nav_menu(
 				array(
@@ -300,13 +313,13 @@ if ( ! function_exists( 'storefront_skip_links' ) ) {
 	}
 }
 
-/* if ( ! function_exists( 'storefront_homepage_header' ) ) {
+if ( ! function_exists( 'storefront_homepage_header' ) ) {
 	/**
 	 * Display the page header without the featured image
 	 *
 	 * @since 1.0.0
 	 */
-	/* function storefront_homepage_header() {
+	function storefront_homepage_header() {
 		edit_post_link( __( 'Edit this section', 'storefront' ), '', '', '', 'button storefront-hero__button-edit' );
 		?>
 		<header class="entry-header">
@@ -316,15 +329,15 @@ if ( ! function_exists( 'storefront_skip_links' ) ) {
 		</header><!-- .entry-header -->
 		<?php
 	}
-} */ 
+}
 
-/* if ( ! function_exists( 'storefront_page_header' ) ) {
+if ( ! function_exists( 'storefront_page_header' ) ) {
 	/**
 	 * Display the page header
 	 *
 	 * @since 1.0.0
 	 */
-	/* function storefront_page_header() {
+	function storefront_page_header() {
 		if ( is_front_page() && is_page_template( 'template-fullwidth.php' ) ) {
 			return;
 		}
@@ -337,8 +350,8 @@ if ( ! function_exists( 'storefront_skip_links' ) ) {
 			?>
 		</header><!-- .entry-header -->
 		<?php
-	} 
-} */
+	}
+}
 
 if ( ! function_exists( 'storefront_page_content' ) ) {
 	/**
@@ -624,11 +637,11 @@ if ( ! function_exists( 'storefront_social_icons' ) ) {
 	 * @since 1.0.0
 	 */
 	function storefront_social_icons() {
-		/* if ( class_exists( 'Subscribe_And_Connect' ) ) {
+		if ( class_exists( 'Subscribe_And_Connect' ) ) {
 			echo '<div class="subscribe-and-connect-connect">';
 			subscribe_and_connect_connect();
 			echo '</div>';
-		} */
+		}
 	}
 }
 
@@ -696,25 +709,3 @@ if ( ! function_exists( 'storefront_header_container_close' ) ) {
 		echo '</div>';
 	}
 }
-
-
-/* Nya funktioner */
-
-if ( ! function_exists('headerContainerLogo') ) {
-
-
-	function headerContainerLogo() {
-		 echo '<div class="headerContainerLogo">';
-	}
-
-}
-
-if ( ! function_exists('headerContainerLogoClose') ) {
-
-
-	function headerContainerLogoClose() {
-		 echo '</div>';
-	}
-
-}
-

@@ -9,6 +9,10 @@ $uri = get_theme_file_uri();
 // registrerar nya css-filer
  wp_register_style('style', $uri . '/style.css');
  wp_register_style('productCategory', $uri . '/css/productCategory.css');
+ wp_register_style('kategorisida-jacket', $uri . '/css/kategorisida-jacket.css');
+ wp_register_style('kategorisida-tights', $uri . '/css/kategorisida-tights.css');
+ wp_register_style('kategorisida-top', $uri . '/css/kategorisida-top.css');
+ wp_register_style('allProducts', $uri . '/css/allProducts.css');
  wp_register_style('produktsida', $uri . '/css/produktsida.css');
  wp_register_style('frontPage', $uri . '/css/frontPage.css');
  wp_register_style('home', $uri . '/css/home.css');
@@ -50,12 +54,24 @@ else if (is_front_page()) {
     wp_enqueue_script('logic');
     wp_enqueue_style('frontPage');
 }
-else if(is_home()) {
+else if(is_home() || is_archive()) {
 
     wp_enqueue_style('home');
     wp_enqueue_script('logic');
-
 }
+else if(is_product_category('tights')) {
+    wp_enqueue_style('kategorisida-tights');
+  
+} 
+else if (is_product_category('jacket')) {
+    wp_enqueue_style('kategorisida-jacket');
+} 
+else if(is_product_category('top')) {
+    wp_enqueue_style('kategorisida-top');
+}
+else if (is_shop()) {
+    wp_enqueue_style('allProducts');
+}  
 
 }
 
