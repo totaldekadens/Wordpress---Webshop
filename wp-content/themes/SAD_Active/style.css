@@ -82,7 +82,7 @@ main {
 
 
 a:focus, input:focus, textarea:focus, button:focus {
-    outline: 1px solid white;
+    outline: 0px solid white;
 }
 
 
