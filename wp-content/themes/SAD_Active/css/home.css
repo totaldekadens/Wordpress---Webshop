@@ -12,19 +12,14 @@ main {
 
 .titlePage {
 
-    margin-bottom: 50px;
+    margin-bottom: 100px;
+
 
 }
-
-/* .postPic {
-    display: flex;
-    width: 400px;
-} */
 
 .postPic {
     display: flex;
     width: 100%;
-    /* max-height: 60vh; */
 }
 
 .postPic img {
@@ -40,12 +35,7 @@ main {
 .bread {
     width: 80%;
 }
-/* .post {
-    gap: 20px;
-    padding-bottom: 10px;
-    width: 90%;
-    height: 20vh;
-} */
+
 
 .post {
     flex-direction: column;
@@ -68,17 +58,10 @@ overflow: hidden;
 }
 
 .date {
-    /* justify-content: center; */
     width: 100%;
     margin-bottom: 10px;
     margin-top: 10px;
 }
-
-/* .date {
-    width: 100%;
-    justify-content: flex-end;
-    margin-top: 10px;
-} */
 
 .date p {
     margin: 0px;

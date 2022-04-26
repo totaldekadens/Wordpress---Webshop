@@ -17,11 +17,12 @@ Content:
     - Searchbar
     - Mobile menu
 3. Hero
-4. USP    
-5. Pagination
-6. Produkter för samlingssidor // Får hitta ett bättre ord för detta sen
-7. Breadcrumbs
-8. Footer
+4. USP  
+5. Hero-slider-frontpage   
+6. Pagination
+7. Produkter för samlingssidor // Får hitta ett bättre ord för detta sen
+8. Breadcrumbs
+9. Footer
 
 
 */
@@ -385,6 +386,10 @@ p.has-text-align-center {
     margin: 0px;
 }
 
+.widget {
+    margin-bottom: 0px;
+}
+
 @media screen and ( max-width: 670px ) {
     p.has-text-align-center {
         font-size: 60px !important;
@@ -421,6 +426,108 @@ p.has-text-align-center {
     }
 
 }
+
+
+
+/* Hero-slider-frontpage ----------------------------*/
+
+
+
+* {box-sizing:border-box}
+
+
+.slideshow-container {
+  position: relative;
+  margin: auto;
+}
+
+.Containers  {
+  display: none;
+}
+
+.Back, .forward {
+  cursor: pointer;
+  position: absolute;
+  top: 48%;
+  width: auto;
+  margin-top: -23px;
+  padding: 17px;
+  color: grey;
+  font-weight: bold;
+  font-size: 19px;
+  transition: 0.4s ease;
+  border-radius: 0 5px 5px 0;
+  user-select: none;
+  z-index: 9999;
+}
+
+.forward {
+  right: 0;
+  border-radius: 4px 0 0 4px;
+}
+
+.Back:hover, .forward:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+
+.dots {
+  cursor: pointer;
+  height: 16px;
+  width: 16px;
+  margin: 0 3px;
+  background-color: rgba(156, 156, 156, 0.312);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.5s ease;
+}
+
+.enable, .dots:hover {
+  background-color: #7b7b7b97;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.4s;
+  animation-name: fade;
+  animation-duration: 1.4s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .5}
+  to {opacity: 2}
+}
+
+@keyframes fade {
+  from {opacity: .5}
+  to {opacity: 2}
+}
+
+.wp-block-image, .wc-block-featured-category {
+    width: 100%;
+    height: 70vh;
+}
+
+.wp-block-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+#block-13 {
+    display: none;
+}
+
+.Containers .widget_block {
+    margin-bottom: 0px;
+}
+
+.wp-block-cover-image img.wp-block-cover__image-background, .wp-block-cover-image video.wp-block-cover__video-background, .wp-block-cover img.wp-block-cover__image-background, .wp-block-cover video.wp-block-cover__video-background, .wp-block-cover {
+    height: 70vh !important;
+}
+
 
 
 
