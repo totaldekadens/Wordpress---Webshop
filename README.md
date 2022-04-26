@@ -15,7 +15,7 @@ Ni skall hitta på ett företag som säljer någon typ av produkter på nätet. 
 
 Påbörjad mockup innan alla fick tillgång till databasen: https://github.com/totaldekadens/wp_mockup_webshop
 
-### 1. Ni skall bygga ett tema med anpassad design som matchar ert företag och de  produkter ni säljer.  ✅ ❌
+### 1. Ni skall bygga ett tema med anpassad design som matchar ert företag och de  produkter ni säljer.  ✅ 
 
    - Temat skall vara helt egen-utvecklat.  
 
@@ -26,9 +26,8 @@ Påbörjad mockup innan alla fick tillgång till databasen: https://github.com/t
    - 1 produkt med 5 varianter räknas som 1 produkt 
 
 ### 4. Webbsidan skall visa dessa eller snarlika funktioner:  ✅ ❌
-   - Ett bildspel som presenterar aktuella kampanjer.  
-   - En kampanj kan representeras av en kategori med produkter. 
-     Eller en rabattkod som ger rabatt.  
+   - Ett bildspel som presenterar aktuella kampanjer.  ✅
+            - En kampanj kan representeras av en kategori med produkter. Eller en rabattkod som ger rabatt. 
    - En listning av populära produkter  
      Populära produkter skall baseras på hur många som köpt dem.   
    - En listning av utvalda (”featured”) produkter  
@@ -36,9 +35,9 @@ Påbörjad mockup innan alla fick tillgång till databasen: https://github.com/t
    - De skall visas med reapris och ordinarie pris.  
    - En puff för det senaste inlägget från bloggen  
 
-### 5. Det skall finnas en sida med villkor och regler.  ✅ ❌
+### 5. Det skall finnas en sida med villkor och regler.  ✅
 
-### 6. Det skall finnas en blogg där det företaget publicerar inlägg om nya och  kommande produkter. ✅ ❌
+### 6. Det skall finnas en blogg där det företaget publicerar inlägg om nya och  kommande produkter. ✅ 
    - Fyll på med 5 inlägg  
    - Inläggen skall ha länkar till relaterade produkter  
 
@@ -46,7 +45,7 @@ Påbörjad mockup innan alla fick tillgång till databasen: https://github.com/t
    - Butikerna skall skapas med hjälp av en Custom Post Type  
    - I redigeringsläge ska det finnas ett fält för plats, och på sidan för butiken skall man  kunna se var butiken är på en karta.  
 
-### 8. Det skall finnas en kontaktsida med följande funktioner  ✅ ❌
+### 8. Det skall finnas en kontaktsida med följande funktioner  ✅ 
    - En karta som visar var företaget har sitt huvudkontor.  
    - Ett formulär med följande fält:  
          * Ärende
