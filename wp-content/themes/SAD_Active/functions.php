@@ -27,6 +27,15 @@ add_filter( 'after_setup_theme', 'remove_new_wc_features', 99 );
 //stänger av produkt pagination
 add_filter( 'theme_mod_storefront_product_pagination', '__return_false', 11 );
 
+// Lägg till länk till varukorgen under "Slutför köp"
+
+function go_to_cart(){
+    ?>
+    <a href="<?php echo wc_get_cart_url(); ?>">Ändra varukorg</a> <?php
+
+}
+add_action('woocommerce_review_order_after_payment','go_to_cart');
+
 // Registrerar och lägger till menyer
 function registrera_meny() {
 
