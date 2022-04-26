@@ -72,6 +72,21 @@ function my_register_sidebars() {
         'id' => 'searchbar',
         'description' => 'searchbar',
     ));
+    register_sidebar( array(
+        'name' => 'carousel_pic_1',
+        'id' => 'carousel_pic_1',
+        'description' => 'First picture in the carousel'
+    ));
+    register_sidebar( array(
+        'name' => 'carousel_pic_2',
+        'id' => 'carousel_pic_2',
+        'description' => 'Second picture in the carousel'
+    ));
+    register_sidebar( array(
+        'name' => 'carousel_pic_3',
+        'id' => 'carousel_pic_3',
+        'description' => 'Third picture in the carousel'
+    ));
 
 
 }
@@ -85,6 +100,11 @@ function newSettingsHooks() {
     
     add_action('storefront_before_content', 'addUsp', 1); // Lägger till usp
     add_action('storefront_before_content', 'addHero', 2); // Lägger till Hero
+
+    if(is_front_page()) {
+        add_action('storefront_before_content', 'addHeroSlider', 2);
+    }
+
     remove_action('woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart', 10);
 
     remove_action('woocommerce_before_shop_loop', 'woocommerce_result_count', 20 );
@@ -106,6 +126,42 @@ function addUsp() {
     </div><?php
 
 }
+
+
+// Heroslider till startsidan
+function addHeroSlider() {
+?>
+    <div class="slideshow-container fade">
+
+    <!-- Full images with numbers and message Info -->
+    <div class="Containers fade">
+          <?php dynamic_sidebar('carousel_pic_1') ?>
+    </div>
+  
+    <div class="Containers fade">
+          <?php dynamic_sidebar('carousel_pic_2') ?>
+    </div>
+  
+    <div class="Containers fade">
+          <?php dynamic_sidebar('carousel_pic_3') ?>
+    </div>
+  
+    <!-- Back and forward buttons -->
+    <a class="Back" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="forward" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+  
+  <!-- The circles/dots -->
+  <div style="text-align:center">
+    <span class="dots" onclick="currentSlide(1)"></span>
+    <span class="dots" onclick="currentSlide(2)"></span>
+    <span class="dots" onclick="currentSlide(3)"></span>
+  </div> 
+
+  <?php
+}
+
 
 
 
