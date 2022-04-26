@@ -15,6 +15,17 @@ add_theme_support('custom-logo');
 add_theme_support('woocommerce');
 
 
+// gör så att produkt bilderna blir mer responsiva
+function remove_new_wc_features() {
+	remove_theme_support( 'wc-product-gallery-zoom' );
+	remove_theme_support( 'wc-product-gallery-slider' );
+    
+}
+add_filter( 'after_setup_theme', 'remove_new_wc_features', 99 );
+
+
+//stänger av produkt pagination
+add_filter( 'theme_mod_storefront_product_pagination', '__return_false', 11 );
 
 // Registrerar och lägger till menyer
 function registrera_meny() {
