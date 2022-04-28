@@ -533,6 +533,34 @@ p.has-text-align-center {
 
 
 
+/* page-kontakt */
+
+.contact-main {
+    justify-content: center;
+}
+
+.contact-main article {
+    display: flex;
+    justify-content: center;
+}
+
+.contact-main article .entry-content {
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+@media screen and ( max-width: 1150px ) {
+    .contact-main article .entry-content {
+        flex-direction: column;
+        gap: 0px;
+        row-gap: 50px;
+    }
+ 
+}
+
+
 
 /* Pagination --------------------------*/
 

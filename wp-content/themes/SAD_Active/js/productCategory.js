@@ -4,12 +4,15 @@ function vidareKnapp(){
     order_review = document.querySelector('#order_review'),
     errorText = document.querySelector('.errorText'),
     order_review_heading = document.querySelector('#order_review_heading')
-    arrConvert = [...document.querySelectorAll('.input-text')]
+    arrConvert = [...document.querySelectorAll('.input-text')] 
+    
 
     nextButton.addEventListener('click', ()=>{
 
+    
     const arr = Array.from(arrConvert)
     const newArr = arr.splice(2, 7)
+
 
         newArr.filter(item => {
             if(item.value.length === 0) {
@@ -27,6 +30,7 @@ function vidareKnapp(){
             }
         })
 
+        document.getElementById("order_review_heading").scrollIntoView();
 
     })
 

@@ -1,0 +1,4 @@
+2022-04-28T07:08:59+00:00 CRITICAL Maximum execution time of 30 seconds exceeded i C:\MAMP\htdocs\Wordpress---Webshop\wp-content\plugins\custom-post-type-ui\inc\taxonomies.php på rad 15
+
+2022-04-28T07:09:03+00:00 CRITICAL Maximum execution time of 30 seconds exceeded i C:\MAMP\htdocs\Wordpress---Webshop\wp-content\plugins\woocommerce-paypal-payments\modules\ppcp-api-client\src\Factory\AuthorizationFactory.php på rad 54
+
