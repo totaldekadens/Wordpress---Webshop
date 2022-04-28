@@ -695,6 +695,7 @@ footer {
     bottom: 0px;
     right: 0px;
     left: 0px;
+    
 }
 
 .containerLogoFooter {
@@ -714,6 +715,7 @@ footer {
 .logoSad a {
     display: flex;
     justify-content: center;
+    margin-bottom: 0px;
 }
 
 .logoSad a img {
@@ -723,16 +725,19 @@ footer {
     opacity: 20%;
 }
 
+.custom-logo-link {
+    width: 70%;
+}
+
 .site-footer {
     background-color: rgba(248, 173, 211, 0.2);
     display: flex;
     justify-content: space-around;
     padding-bottom: 50px;
-    padding-top: 30px;
+    padding-top: 70px;
+
 }
-/* .site-info{
-    display:none;
-} */
+
 
 h2 {
     color: rgba(0, 0, 0, 0.745);
@@ -752,16 +757,14 @@ h2 {
     font-size: 15px;
     text-decoration: none;
     color:black;
-    font-weight: bold;
 }
-.wp-container-6268477d48699, .wp-block-group, .tbCon {
-    /* margin: 20px; */
-    flex-wrap: wrap;
 
+.widget_block h4 {
+    font-weight: 500;
 }
+
 .block{
     margin-right: 0;
-    /* margin: 20px; */
 }
 
 .site-footer .col-full{
@@ -771,12 +774,23 @@ h2 {
     margin:20px;
 }
 
-.footer-widgets {
-    display: flex;
+
+.footerCont {
     justify-content: space-around;
     flex-wrap: wrap;
+    row-gap: 20px;
+    column-gap: 20px;
     width: 100%;
 }
+
+.footer-widget-1, .footer-widget-2, .footer-widget-3, .footer-widget-4 {
+    padding: 0px 20px 0px 20px;
+}
+
+.wp-block-image .aligncenter {
+    width: 70px;
+    margin: 0px 5px 0px 5px;
+} 
 
 
 .wp-block-image{
@@ -787,6 +801,7 @@ flex-wrap:wrap;
 .tb > img{
     width: 100%;
 }
+
 @media (min-width: 768px){
     .col-full {
         margin-right: 20px;
@@ -802,6 +817,47 @@ flex-wrap:wrap;
         float: left;
         margin-right: 0;
     }
+}
+
+@media (max-width: 1300px){
+    .custom-logo-link {
+        width: 80%;
+    }
+
+}
+
+@media (max-width: 800px){
+    .custom-logo-link {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 600px){
+    .wp-block-image .aligncenter {
+        width: 50px;
+    } 
+
+    .widget a, .widget p {
+        font-size: 18px;
+    }
+
+    .widget_block h4 {
+        font-size: 22px;
+        font-weight: 600;
+    }
+
+}
+
+@media (max-width: 420px){
+    .wp-block-image .aligncenter {
+        width: 40px;
+    } 
+
+    .footerCont {
+        justify-content: flex-start;
+    }
+
 }
 
 

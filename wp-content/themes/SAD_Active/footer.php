@@ -6,12 +6,15 @@
  *
  * @package storefront
  */
-echo "footer-storefront";
 ?>
 
 		</div><!-- .col-full -->
 	</div><!-- #content -->
-
+			 <div class="containerLogoFooter">
+				<div class="logoSad">
+					<?php the_custom_logo() ?>
+				</div>
+			</div>
 	<?php do_action( 'storefront_before_footer' ); ?>
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
@@ -25,6 +28,7 @@ echo "footer-storefront";
 			 * @hooked storefront_footer_widgets - 10
 			 * @hooked storefront_credit         - 20
 			 */
+			
 			do_action( 'storefront_footer' );
 			?>
 

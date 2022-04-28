@@ -105,7 +105,7 @@ if ( ! function_exists( 'storefront_footer_widgets' ) ) {
 
 			if ( isset( $columns ) ) :
 				?>
-				<div class=<?php echo '"footer-widgets row-' . esc_attr( $row ) . ' col-' . esc_attr( $columns ) . ' fix"'; ?>>
+				<div class= "flex footerCont">
 				<?php
 				for ( $column = 1; $column <= $columns; $column++ ) :
 					$footer_n = $column + $regions * ( $row - 1 );
