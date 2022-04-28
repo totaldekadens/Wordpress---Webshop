@@ -19,6 +19,7 @@ $uri = get_theme_file_uri();
  wp_register_style('single', $uri . '/css/single.css');
  wp_register_style('cart', $uri . '/css/cart.css');
  wp_register_style('checkout', $uri . '/css/checkout.css');
+ wp_register_style('kontakt', $uri . '/css/kontakt.css');
 
 // Registrerar script-filer.
 wp_register_script('logic', $uri . '/js/logic.js', [], false, true );
@@ -77,6 +78,7 @@ else if(is_product_category('top')) {
 else if (is_shop()) {
     wp_enqueue_style('allProducts');
 }  
+
 
 
 }

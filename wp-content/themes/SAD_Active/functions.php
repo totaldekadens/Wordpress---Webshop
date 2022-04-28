@@ -31,10 +31,16 @@ add_filter( 'theme_mod_storefront_product_pagination', '__return_false', 11 );
 
 function go_to_cart(){
     ?>
-    <a class="changeCart" href="<?php echo wc_get_cart_url(); ?>">Ändra varukorg</a> <?php
-
+    <a class="changeCart" href="<?php echo wc_get_cart_url(); ?>">Ändra varukorg</a> 
+    <br>
+    <h3>Välj betalningsmetod</h3>
+    
+    <?php
 }
-add_action('woocommerce_review_order_before_submit','go_to_cart');
+
+
+/* add_action('woocommerce_review_order_before_submit','go_to_cart'); */
+add_action('woocommerce_review_order_before_payment','go_to_cart');
 
 // lägger till en nästa knapp i cart
 function next_cart(){
@@ -44,7 +50,21 @@ function next_cart(){
     <?php
 
 }
+
+add_action('woocommerce_review_order_after_payment','support_checkOut');
+
+function support_checkOut() {
+
+    $page = get_page_by_title( 'kontakt' );
+?>
+    <div class="support">Behöver du hjälp med ditt köp? Kontakta oss på +46-73 612 54 11 eller via vår <a href="<?php echo $page->guid?>">kontaktsida</a> </div> 
+    <?php
+}
+
 add_action('woocommerce_checkout_after_customer_details', 'next_cart');
+
+
+
 
 // Registrerar och lägger till menyer
 function registrera_meny() {

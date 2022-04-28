@@ -1,7 +1,30 @@
+
+.woocommerce {
+    width: 100%;
+}
+
+.entry-content {
+    width: 100%;
+}
+
+.site-content {
+    width: 100%;
+}
+
+#page {
+    width: 100%;
+}
+
+#post-8 {
+    width: 80%;
+}
+
 .changeCart{
     left:50%;
-
-    margin: 10px;
+    display: flex;
+    text-align: center;
+    width: 200px;
+    margin: 10px 10px 10px 0px ;
     border: 0;
     border-radius: 0;
     background: none;
@@ -21,24 +44,52 @@ display: flex;
 flex-direction: column;
 align-items: center;
 }
+
 #order_review, #order_review_heading{
     display: none;
-
+    flex-direction: column
 }
+
+table.woocommerce-checkout-review-order-table .product-name {
+    width: 80% !important; 
+}
+
+.woocommerce-form__label-for-checkbox {
+    font-size: 16px;
+}
+
+#customer_details {
+    width: 100% !important;
+}
+
+.right-sidebar .content-area {
+    width: 100% !important;
+}
+
 
 @media (min-width: 768px){
     #order_review_heading, #order_review {
-        width: 50%!important;
         float: none!important;
         margin-right: 0!important;
         clear: right;
+        flex-direction: column; 
+        width: 100% !important; 
     }
     #customer_details{
-        width: 80%!important;
+        width: 100%!important;
         float: none!important;
         margin-right: 0!important;
         clear: right;
     }
+
+    table.woocommerce-checkout-review-order-table .product-name {
+        width: 80% !important; 
+    }
+
+    .right-sidebar .content-area {
+        width: 100% !important;
+    }
+
 
 }
 .errorText{
@@ -50,7 +101,9 @@ align-items: center;
     background-color: #F06AA4;
     color:white;
     font-weight: bold;
+    cursor: pointer;
 }
 #colophon{
     display:none
 }
+
