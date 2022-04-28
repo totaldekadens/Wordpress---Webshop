@@ -17,6 +17,8 @@ $uri = get_theme_file_uri();
  wp_register_style('frontPage', $uri . '/css/frontPage.css');
  wp_register_style('home', $uri . '/css/home.css');
  wp_register_style('single', $uri . '/css/single.css');
+ wp_register_style('cart', $uri . '/css/cart.css');
+ wp_register_style('checkout', $uri . '/css/checkout.css');
 
 // Registrerar script-filer.
 wp_register_script('logic', $uri . '/js/logic.js', [], false, true );
@@ -40,6 +42,9 @@ wp_register_script('product', $uri . '/js/product.js', [], false, true );
 if(is_page() && !is_front_page()) {
     wp_enqueue_style('productCategory');
     wp_enqueue_script('productCategory');
+    wp_enqueue_style('cart');
+    wp_enqueue_style('checkout');
+
 } 
 
 // Är man på "single.php" då körs dessa filer
@@ -72,6 +77,7 @@ else if(is_product_category('top')) {
 else if (is_shop()) {
     wp_enqueue_style('allProducts');
 }  
+
 
 }
 

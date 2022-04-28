@@ -1,0 +1,56 @@
+.changeCart{
+    left:50%;
+
+    margin: 10px;
+    border: 0;
+    border-radius: 0;
+    background: none;
+    background-color: #333333;
+    border-color: #333333;
+    color: #fff;
+    cursor: pointer;
+    padding: .6180469716em 1.41575em;
+    font-weight: 600;
+    text-shadow: none;
+    display: inline-block;
+    -webkit-appearance: none;
+    text-decoration: none!important;
+}
+.woocommerce-checkout, .checkout{
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+#order_review, #order_review_heading{
+    display: none;
+
+}
+
+@media (min-width: 768px){
+    #order_review_heading, #order_review {
+        width: 50%!important;
+        float: none!important;
+        margin-right: 0!important;
+        clear: right;
+    }
+    #customer_details{
+        width: 80%!important;
+        float: none!important;
+        margin-right: 0!important;
+        clear: right;
+    }
+
+}
+.errorText{
+    display:none;
+    color:#ff3333;
+}
+.nasta{
+    padding: 10px 20px 10px 20px;
+    background-color: #F06AA4;
+    color:white;
+    font-weight: bold;
+}
+#colophon{
+    display:none
+}

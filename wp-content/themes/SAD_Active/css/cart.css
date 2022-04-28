@@ -1,0 +1,25 @@
+.cart-collaterals{
+    display: flex;
+    justify-content: center;
+
+}
+.cart_totals{
+
+    width: 100%;
+}
+
+.ppc-button-wrapper{
+    text-align: center;
+}
+
+
+
+
+@media (min-width: 768px){
+
+    .cart-collaterals .cart_totals, .cart-collaterals .shipping_calculator {
+
+        width: 100%!important;
+    }
+
+}

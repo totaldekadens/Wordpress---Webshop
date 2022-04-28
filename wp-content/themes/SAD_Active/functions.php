@@ -31,10 +31,20 @@ add_filter( 'theme_mod_storefront_product_pagination', '__return_false', 11 );
 
 function go_to_cart(){
     ?>
-    <a href="<?php echo wc_get_cart_url(); ?>">Ändra varukorg</a> <?php
+    <a class="changeCart" href="<?php echo wc_get_cart_url(); ?>">Ändra varukorg</a> <?php
 
 }
-add_action('woocommerce_review_order_after_payment','go_to_cart');
+add_action('woocommerce_review_order_before_submit','go_to_cart');
+
+// lägger till en nästa knapp i cart
+function next_cart(){
+    ?>
+    <span class="errorText">*Fyll i dina uppgifter först!</span>
+    <div class="nasta">Nästa</div> 
+    <?php
+
+}
+add_action('woocommerce_checkout_after_customer_details', 'next_cart');
 
 // Registrerar och lägger till menyer
 function registrera_meny() {

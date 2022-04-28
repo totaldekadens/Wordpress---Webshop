@@ -727,13 +727,13 @@ h2 {
     font-weight: bold;
 }
 .wp-container-6268477d48699, .wp-block-group, .tbCon {
-    margin: 20px;
+    /* margin: 20px; */
     flex-wrap: wrap;
 
 }
 .block{
     margin-right: 0;
-    margin: 20px;
+    /* margin: 20px; */
 }
 
 .site-footer .col-full{
