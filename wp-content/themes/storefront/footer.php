@@ -6,7 +6,7 @@
  *
  * @package storefront
  */
-
+echo "footer-storefront";
 ?>
 
 		</div><!-- .col-full -->
@@ -16,6 +16,7 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="col-full">
+			
 
 			<?php
 			/**

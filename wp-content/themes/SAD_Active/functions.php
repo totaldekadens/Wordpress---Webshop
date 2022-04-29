@@ -15,6 +15,56 @@ add_theme_support('custom-logo');
 add_theme_support('woocommerce');
 
 
+// gör så att produkt bilderna blir mer responsiva
+function remove_new_wc_features() {
+	remove_theme_support( 'wc-product-gallery-zoom' );
+	remove_theme_support( 'wc-product-gallery-slider' );
+    
+}
+add_filter( 'after_setup_theme', 'remove_new_wc_features', 99 );
+
+
+//stänger av produkt pagination
+add_filter( 'theme_mod_storefront_product_pagination', '__return_false', 11 );
+
+// Lägg till länk till varukorgen under "Slutför köp"
+
+function go_to_cart(){
+    ?>
+    <a class="changeCart" href="<?php echo wc_get_cart_url(); ?>">Ändra varukorg</a> 
+    <br>
+    <h3>Välj betalningsmetod</h3>
+    
+    <?php
+}
+
+
+/* add_action('woocommerce_review_order_before_submit','go_to_cart'); */
+add_action('woocommerce_review_order_before_payment','go_to_cart');
+
+// lägger till en nästa knapp i cart
+function next_cart(){
+    ?>
+    <span class="errorText">*Fyll i dina uppgifter först!</span>
+    <div class="nasta">Nästa</div> 
+    <?php
+
+}
+
+add_action('woocommerce_review_order_after_payment','support_checkOut');
+
+function support_checkOut() {
+
+    $page = get_page_by_title( 'kontakt' );
+?>
+    <div class="support">Behöver du hjälp med ditt köp? Kontakta oss på +46-73 612 54 11 eller via vår <a href="<?php echo $page->guid?>">kontaktsida</a> </div> 
+    <?php
+}
+
+add_action('woocommerce_checkout_after_customer_details', 'next_cart');
+
+
+
 
 // Registrerar och lägger till menyer
 function registrera_meny() {
@@ -72,6 +122,21 @@ function my_register_sidebars() {
         'id' => 'searchbar',
         'description' => 'searchbar',
     ));
+    register_sidebar( array(
+        'name' => 'carousel_pic_1',
+        'id' => 'carousel_pic_1',
+        'description' => 'First picture in the carousel'
+    ));
+    register_sidebar( array(
+        'name' => 'carousel_pic_2',
+        'id' => 'carousel_pic_2',
+        'description' => 'Second picture in the carousel'
+    ));
+    register_sidebar( array(
+        'name' => 'carousel_pic_3',
+        'id' => 'carousel_pic_3',
+        'description' => 'Third picture in the carousel'
+    ));
 
 
 }
@@ -85,6 +150,11 @@ function newSettingsHooks() {
     
     add_action('storefront_before_content', 'addUsp', 1); // Lägger till usp
     add_action('storefront_before_content', 'addHero', 2); // Lägger till Hero
+
+    if(is_front_page()) {
+        add_action('storefront_before_content', 'addHeroSlider', 2);
+    }
+
     remove_action('woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart', 10);
 
     remove_action('woocommerce_before_shop_loop', 'woocommerce_result_count', 20 );
@@ -106,6 +176,42 @@ function addUsp() {
     </div><?php
 
 }
+
+
+// Heroslider till startsidan
+function addHeroSlider() {
+?>
+    <div class="slideshow-container fade">
+
+    <!-- Full images with numbers and message Info -->
+    <div class="Containers fade">
+          <?php dynamic_sidebar('carousel_pic_1') ?>
+    </div>
+  
+    <div class="Containers fade">
+          <?php dynamic_sidebar('carousel_pic_2') ?>
+    </div>
+  
+    <div class="Containers fade">
+          <?php dynamic_sidebar('carousel_pic_3') ?>
+    </div>
+  
+    <!-- Back and forward buttons -->
+    <a class="Back" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="forward" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+  
+  <!-- The circles/dots -->
+  <div style="text-align:center">
+    <span class="dots" onclick="currentSlide(1)"></span>
+    <span class="dots" onclick="currentSlide(2)"></span>
+    <span class="dots" onclick="currentSlide(3)"></span>
+  </div> 
+
+  <?php
+}
+
 
 
 

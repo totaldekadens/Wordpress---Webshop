@@ -1,40 +1,62 @@
 
-let dropdownImg = document.querySelector(".dropmenu")
-let subMenuToBeToggled = document.querySelector(".dropdownMenu")
+function vidareKnapp(){
+    const is_user_logged_in = document.body.classList.contains( 'logged-in' );
+    const nextButton = document.querySelector('.nasta'),
+    order_review = document.querySelector('#order_review'),
+    errorText = document.querySelector('.errorText'),
+    order_review_heading = document.querySelector('#order_review_heading'),
+    arrConvert = [...document.querySelectorAll('.input-text')]
 
-dropdownImg.addEventListener("click", () => {
+    nextButton.addEventListener('click', ()=>{
+        
+        const arr = Array.from(arrConvert)
+   
+        
 
-    subMenuToBeToggled.classList.toggle("flex")
+        if(is_user_logged_in){
+            const newArr2 = arr.slice()
+            newArr2.splice(7, 5)  
+     
+                console.log(newArr2)
+            newArr2.filter(item => {  
+                
+                if(item.value.length === 0) {
+                    return (
+                        errorText.style.display = 'flex',
+                        order_review.style.display ='none'
+                    
+                    )
+                    
+                } else if (newArr2.every(item => item.value.length > 0)) {
+                    errorText.style.display = 'none'
+                    order_review_heading.style.display = 'flex'
+                    order_review.style.display ='flex'
+                    nextButton.style.display = 'none'
+                }
+            })
+        }else{
+            const newArr = arr.slice()
+                const newArr3 = newArr.splice(2, 7)
+                newArr3.filter(item => {
+                if(item.value.length === 0) {
+                    return (
+                        errorText.style.display = 'flex',
+                        order_review.style.display ='none'
+                    
+                    )
+                    
+                } else if (newArr3.every(item => item.value.length > 0)) {
+                    errorText.style.display = 'none'
+                    order_review_heading.style.display = 'flex'
+                    order_review.style.display ='flex'
+                    nextButton.style.display = 'none'
+                }
+            })
+        }   
 
-})
+        document.getElementById("order_review_heading").scrollIntoView();
 
+    })
 
-
-
-
-/* let productCard = document.querySelector(".woocommerce-LoopProduct-link")
-let productInCatImg = document.createElement("div")
-productInCatImg.classList.add("productInCatImg")
-
-let productImage = document.querySelector(".attachment-woocommerce_thumbnail")
-
-
-
-let productInCatInfo = document.createElement("div")
-productInCatInfo.classList.add("productInCatInfo")
-
-
-
-let productTitleCat = document.querySelector(".woocommerce-loop-product__title")
-productTitleCat.classList.add("productTitleCat")
-let productPriceCat = document.querySelector(".price")
-productPriceCat.classList.add("productPriceCat")
-let productPriceAmount = document.querySelector(".woocommerce-Price-amount amount")
-productPriceAmount.classList.add("productPriceAmount")
-
-
-productCard.append(productInCatImg, productInCatInfo )
-productInCatImg.append(productImage)
-productInCatInfo.append(productTitleCat, productPriceCat, productPriceAmount ) 
-
- */
+}
+vidareKnapp();
