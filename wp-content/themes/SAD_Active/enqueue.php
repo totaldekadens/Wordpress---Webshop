@@ -20,17 +20,18 @@ $uri = get_theme_file_uri();
  wp_register_style('cart', $uri . '/css/cart.css');
  wp_register_style('checkout', $uri . '/css/checkout.css');
  wp_register_style('kontakt', $uri . '/css/kontakt.css');
+ wp_register_style('butik', $uri . '/css/singleButik.css');
 
 // Registrerar script-filer.
 
-wp_register_script('popper.min', $uri . '/js/popper.min.js' );
-wp_register_script('bootstrap.min', $uri . '/js/bootstrap.min.js');
+/* wp_register_script('popper.min', $uri . '/js/popper.min.js' ); */
+/* wp_register_script('bootstrap.min', $uri . '/js/bootstrap.min.js'); */
 wp_register_script('logic', $uri . '/js/logic.js', [], false, true );
 wp_register_script('productCategory', $uri . '/js/productCategory.js', [], false, true );
 wp_register_script('product', $uri . '/js/product.js', [], false, true );
 wp_register_script('product', $uri . '/js/product.js', [], false, true );
 wp_register_script('popper', $uri . '/js/popper.min.js' );
-wp_register_script('bootstrap', $uri . '/js/bootstrap.min.js',['popper'] );
+/* wp_register_script('bootstrap', $uri . '/js/bootstrap.min.js',['popper'] ); */
 
 
 
@@ -40,10 +41,10 @@ wp_register_script('bootstrap', $uri . '/js/bootstrap.min.js',['popper'] );
 
 // css- script-filer  som läggs här hamnar i alla php-filer
  wp_enqueue_style('style');
- wp_enqueue_style('bootstrap');
+/*  wp_enqueue_style('bootstrap');
  wp_enqueue_script('popper');
  wp_enqueue_script('bootstrap');
-
+ */
 
 
 
@@ -56,7 +57,9 @@ if(is_page() && !is_front_page()) {
     wp_enqueue_style('checkout');
 
 } 
-
+else if (is_single('')) {
+    wp_enqueue_style('singleButik');
+} 
 // Är man på "single.php" då körs dessa filer
 else if (is_single()) {
     wp_enqueue_style('produktsida');
@@ -74,16 +77,7 @@ else if(is_home() || is_archive()) {
     wp_enqueue_style('home');
     wp_enqueue_script('logic');
 }
-else if(is_product_category('tights')) {
-    wp_enqueue_style('kategorisida-tights');
-  
-} 
-else if (is_product_category('jacket')) {
-    wp_enqueue_style('kategorisida-jacket');
-} 
-else if(is_product_category('top')) {
-    wp_enqueue_style('kategorisida-top');
-}
+
 else if (is_shop()) {
     wp_enqueue_style('allProducts');
 }  

@@ -600,6 +600,25 @@ button.menu-toggle {
  
 }
 
+    /* singelbutiker */
+
+
+    .singleButikMain {
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 20px;
+    }   
+    
+    .containerButik {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        flex-wrap: wrap;
+    }
 
 
 /* Pagination --------------------------*/
