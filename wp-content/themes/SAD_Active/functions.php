@@ -332,4 +332,35 @@ add_action( 'storefront_header', 'customizedHeader', 45 );
 
 
 
+
+
+// Gardin på kategorier 
+function selectproductCategory() {
+
+    if(is_product_category()|| is_shop()) {
+        ?>
+        <div class="categorySelection">
+            <div class="chooseCategory">
+                <select onchange="window.location.href=this.value" name="selectCategory" id="selectCategory">
+                    <option value="" disabled selected>Kategorier</option>
+                    <?php     
+                        $categories = get_terms( ['taxonomy' => 'product_cat'] );
+    
+                        foreach ($categories as $cat => $value) {
+    
+                            $link = get_term_link($value->slug, 'product_cat' );
+    
+                           ?> <option value="<?php echo $link; ?>" ><?php echo $value->name; ?></option> <?php
+                        }
+                    ?>
+                </select>
+            </div>
+        </div>
+        <?php
+    }
+}
+
+add_action('woocommerce_before_main_content', 'selectproductCategory', 1); 
+
+
 ?>

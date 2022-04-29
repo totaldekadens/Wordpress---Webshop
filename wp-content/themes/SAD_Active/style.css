@@ -708,11 +708,40 @@ ul.products, .wc-block-grid__products {
 
 
 
-/* Breadcrumbs */
+
+/* productCategory */
+
 
 .storefront-breadcrumb {
-    margin-bottom: 70px;
+
+    margin-bottom: 0px;
+
 }
+
+.categorySelection {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#selectCategory {
+    display: flex;
+    width: 110px;
+    height: 50px;
+    padding: 7px;
+    margin-bottom: 20px;
+    border: none;
+}
+
+option {
+    display: flex;
+    border: none;
+    height: 50px;
+    padding: 5px;
+    border-radius: 4px;
+    
+}
+
+
 
 /* Produktsidan */
 
