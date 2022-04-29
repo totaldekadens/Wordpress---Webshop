@@ -27,7 +27,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
                 $this->title = 'Drone Shipping';
                 $this->init();      
                 
-               
+
                 
                 }
 
@@ -110,7 +110,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
     }
     add_filter ('woocommerce_shipping_methods', 'add_drone_shipping_method');
 
-    function cloudways_validate_order($posted) {
+    function ds_validate_order($posted) {
 
     $packages = WC()->shipping->get_packages();
     $chosen_methods = WC()->session->get('chosen_shipping_methods');
@@ -128,7 +128,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
     }
     $weight = wc_get_weight($weight, 'kg');
     if ($weight > $weightLimit) {
-    $message = sprintf(__('OOPS, %d kg increase the maximum weight of %d kg for %s', 'cloudways'), $weight, $weightLimit, $wc_drone_shipping->title);
+    $message = sprintf(__('OOPS, %d kg increase the maximum weight of %d kg for %s', 'Drone Shipping'), $weight, $weightLimit, $wc_drone_shipping->title);
     $messageType = "error";
     if (!wc_has_notice($message, $messageType)) {
     wc_add_notice($message, $messageType);
@@ -137,8 +137,8 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
     }
     }
     }
-    add_action('woocommerce_review_order_before_cart_contents', 'cloudways_validate_order', 10);
-    add_action('woocommerce_after_checkout_validation', 'cloudways_validate_order', 10);
+    add_action('woocommerce_review_order_before_cart_contents', 'DS_validate_order', 10);
+    add_action('woocommerce_after_checkout_validation', 'DS_validate_order', 10);
    
 
 }
