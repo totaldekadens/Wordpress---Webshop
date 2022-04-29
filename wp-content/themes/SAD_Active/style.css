@@ -90,6 +90,10 @@ a:focus, input:focus, textarea:focus, button:focus {
     max-width: unset;
 }
 
+.woocommerce-result-count {
+    display: none;
+}
+
 
 
 
@@ -362,32 +366,35 @@ button.menu-toggle {
 }
 
 
-/* Hero  */
+/* Hero shop */
 
 .widget_media_image {
     margin-bottom: 0px;
 }
-
+ 
 .wp-block-cover, .wp-block-cover-image {
     position: relative;
     background-size: cover;
     background-position: 50%;
-    min-height: 60vh;
+    max-height: 60vh;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 1em;
     box-sizing: border-box;
-}
+} 
+/* .wp-block-cover .wp-block-cover__image-background {
+    max-height: 60vh;
+} */
 
-p.has-text-align-center {
+ p.has-text-align-center {
     font-size: 90px !important;
     font-weight: 400 !important;
     color: rgba(255, 255, 255, 0.452) !important;
     padding: 0px;
     margin: 0px;
-}
+} 
 
 .widget {
     margin-bottom: 0px;
@@ -395,6 +402,39 @@ p.has-text-align-center {
 
 @media screen and ( max-width: 670px ) {
     p.has-text-align-center {
+        font-size: 60px !important;
+    }
+
+} 
+
+/* Hero categories */
+
+.heroCatCont {
+    position: relative;
+    text-align: center;
+    color: white;
+    width: 100%;
+    max-height: 40vh;
+}
+
+.heroCatCont img {
+    width: 100%;
+    max-height: 40vh;
+    object-fit: cover;
+}
+
+.heroCatCont h1 {
+    position: absolute;
+    font-size: 90px;
+    color: rgba(184, 184, 184, 0.935);
+    font-weight: 400;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  @media screen and ( max-width: 670px ) {
+    .heroCatCont h1 {
         font-size: 60px !important;
     }
 
@@ -527,9 +567,9 @@ p.has-text-align-center {
     margin-bottom: 0px;
 }
 
-.wp-block-cover-image img.wp-block-cover__image-background, .wp-block-cover-image video.wp-block-cover__video-background, .wp-block-cover img.wp-block-cover__image-background, .wp-block-cover video.wp-block-cover__video-background, .wp-block-cover {
+/* .wp-block-cover-image img.wp-block-cover__image-background, .wp-block-cover-image video.wp-block-cover__video-background, .wp-block-cover img.wp-block-cover__image-background, .wp-block-cover video.wp-block-cover__video-background, .wp-block-cover {
     height: 70vh !important;
-}
+} */
 
 
 
