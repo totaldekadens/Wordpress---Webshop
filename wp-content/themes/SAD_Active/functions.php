@@ -92,7 +92,7 @@ function my_register_sidebars() {
         'description' => 'socialmedia',
     ));
 
-    register_sidebar( array(
+/*     register_sidebar( array(
         'name' => 'hero-top',
         'id' => 'hero-top',
         'description' => 'Hero-top',
@@ -106,7 +106,8 @@ function my_register_sidebars() {
         'name' => 'hero-jacket',
         'id' => 'hero-jacket',
         'description' => 'Hero-jacket',
-    ));
+    )); */
+    
     register_sidebar( array(
         'name' => 'hero-products',
         'id' => 'hero-products',
@@ -149,7 +150,8 @@ add_action( 'widgets_init', 'my_register_sidebars' );
 function newSettingsHooks() {
     
     add_action('storefront_before_content', 'addUsp', 1); // Lägger till usp
-    add_action('storefront_before_content', 'addHero', 2); // Lägger till Hero
+    add_action('storefront_before_content', 'addHeroProdCat', 2); // Lägger till Hero på kategorier
+    add_action('storefront_before_content', 'addHeroShop', 2); // Lägger till Hero på "produkter"-sidan
 
     if(is_front_page()) {
         add_action('storefront_before_content', 'addHeroSlider', 2);
@@ -157,16 +159,19 @@ function newSettingsHooks() {
 
     remove_action('woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart', 10);
 
-    remove_action('woocommerce_before_shop_loop', 'woocommerce_result_count', 20 );
-    remove_action('woocommerce_after_shop_loop', 'woocommerce_result_count', 20 );
-    remove_action('woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 10 );
-    remove_action('woocommerce_after_shop_loop', 'woocommerce_catalog_ordering', 10 );
-
+    if(is_product_category() || is_shop()) {
+        remove_action('woocommerce_before_shop_loop', 'woocommerce_result_count', 20 );
+        remove_action('woocommerce_after_shop_loop', 'woocommerce_result_count', 20 );
+        remove_action('woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 10 );
+        remove_action('woocommerce_after_shop_loop', 'woocommerce_catalog_ordering', 10 );
+    }
+ 
 }
 
 add_action('wp', 'newSettingsHooks');
 
 
+// Lägger till USP
 function addUsp() {
 
     ?><div class="usp">
@@ -178,36 +183,33 @@ function addUsp() {
 }
 
 
-// Heroslider till startsidan
+// Karusell till startsidan
 function addHeroSlider() {
 ?>
     <div class="slideshow-container fade">
 
-    <!-- Full images with numbers and message Info -->
-    <div class="Containers fade">
-          <?php dynamic_sidebar('carousel_pic_1') ?>
+        <div class="Containers fade">
+            <?php dynamic_sidebar('carousel_pic_1') ?>
+        </div>
+    
+        <div class="Containers fade">
+            <?php dynamic_sidebar('carousel_pic_2') ?>
+        </div>
+    
+        <div class="Containers fade">
+            <?php dynamic_sidebar('carousel_pic_3') ?>
+        </div>
+
+        <a class="Back" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="forward" onclick="plusSlides(1)">&#10095;</a>
     </div>
-  
-    <div class="Containers fade">
-          <?php dynamic_sidebar('carousel_pic_2') ?>
-    </div>
-  
-    <div class="Containers fade">
-          <?php dynamic_sidebar('carousel_pic_3') ?>
-    </div>
-  
-    <!-- Back and forward buttons -->
-    <a class="Back" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="forward" onclick="plusSlides(1)">&#10095;</a>
-  </div>
-  <br>
-  
-  <!-- The circles/dots -->
-  <div style="text-align:center">
-    <span class="dots" onclick="currentSlide(1)"></span>
-    <span class="dots" onclick="currentSlide(2)"></span>
-    <span class="dots" onclick="currentSlide(3)"></span>
-  </div> 
+    <br>
+    
+    <div style="text-align:center">
+        <span class="dots" onclick="currentSlide(1)"></span>
+        <span class="dots" onclick="currentSlide(2)"></span>
+        <span class="dots" onclick="currentSlide(3)"></span>
+    </div> 
 
   <?php
 }
@@ -215,60 +217,91 @@ function addHeroSlider() {
 
 
 
-// lägger till sidebar (i detta fall hero) beroende på vilken sida du är inne på.
-function addHero() {
+// Lägger till hero på kategorier dynamiskt. 
+function addHeroProdCat() {
+   
+    $categories = get_terms( ['taxonomy' => 'product_cat'] );
 
-    if(is_product_category('tights')) {
-        dynamic_sidebar('hero-tights');
-    } 
-    else if (is_product_category('jacket')) {
-        dynamic_sidebar('hero-jacket');
-    } 
-    else if(is_product_category('top')) {
-        dynamic_sidebar('hero-top');
+    foreach ($categories as $cat => $value) {
+
+         $thumbnail_id = get_term_meta( $value->term_id, 'thumbnail_id', true );
+         $image_url = wp_get_attachment_url( $thumbnail_id ); 
+
+         $slug = $value->slug;
+
+        if(is_product_category($slug)) {
+            ?>
+                <div class="heroCatCont">
+                    <?php if($image_url) {
+
+                        ?>
+                        <img class= "image-<?php echo $slug ?>" src="<?php echo $image_url?>">
+                        <h1><?php echo $value->name ?></h1>
+                        <?php
+
+                    } 
+                    else {
+                        wp_enqueue_style('imageExist');
+                        ?><h1><?php echo $value->name ?></h1><?php
+                    }
+                    ?>
+                    
+                </div>
+            <?php
+        }  
     }
-    else if (is_shop()) {
-        dynamic_sidebar('hero-products');
-    }  
 }
 
 
 
 
-// om man är på kassasidan. Ta bort header, footer och olika fält 
+
+// lägger till sidebar (i detta fall hero) på "produkter"
+function addHeroShop() {
+
+    if (is_shop()) {
+        dynamic_sidebar('hero-products');
+        wp_enqueue_style('allProducts'); // Lyckades inte få in den i enqueue.php. får ligga här sålänge.
+    }  
+}
+
+
+
+// Om man är på kassasidan
 function removeStorefront() {
 
     if(is_checkout()) {
 
+        // Tar bort allt i headern
         remove_action( 'storefront_header', 'storefront_header_container', 0 );
         remove_action( 'storefront_header', 'storefront_skip_links', 5 );
         remove_action( 'storefront_header', 'storefront_site_branding', 20 );
         remove_action( 'storefront_header', 'storefront_secondary_navigation', 30 );
         remove_action( 'storefront_header', 'storefront_header_container_close', 41 ); 
+        remove_all_actions('storefront_header'); 
 
-        remove_all_actions('storefront_header'); // Tar bort allt i headern
         remove_all_actions('storefront_footer'); // Tar bort allt i footern
-        remove_action('storefront_before_content', 'woocommerce_breadcrumb', 10);  // Tar bort breadcrumbs 
-        remove_action('woocommerce_before_checkout_form', 'woocommerce_checkout_coupon_form', 10 ); // Tar bort rabattkoden däruppe
 
+        remove_action('storefront_before_content', 'woocommerce_breadcrumb', 10);  // Tar bort breadcrumbs 
+
+        remove_action('woocommerce_before_checkout_form', 'woocommerce_checkout_coupon_form', 10 ); // Tar bort rabattkoden däruppe
         add_action('woocommerce_after_checkout_form', 'woocommerce_checkout_coupon_form', 10 ); // Lägger till rabattkoden där nere istället
         
 
 
+        // Tar bort onödiga fält 
         add_filter('woocommerce_checkout_fields', 'ams_overwrite_checkout_fields');
 
         function ams_overwrite_checkout_fields($fields) {
 
             unset(
                 $fields['order']['order_comments'], // Tar bort orderkommentarer / Anteckningar (valfritt)
-                $fields['billing']['billing_address_2'],  // Tar bort addressrad 2
-                $fields['shipping']['shipping_address_2'],
-                $fields['shipping']['shipping_company'],  
-                $fields['billing']['billing_company'], // Tar bort Företagsnamn (valfritt)
+                $fields['billing']['billing_address_2'],  // Tar bort addressrad 2 på faktureringsadress
+                $fields['shipping']['shipping_address_2'], // Tar bort addressrad 2 på leveransadress
+                $fields['shipping']['shipping_company'],  // Tar bort företagsnamn-raden på leveransadress
+                $fields['billing']['billing_company'], // Tar bort Företagsnamn-raden på faktureringsadress
             );
-
             return $fields;
-
         }
     }
 }

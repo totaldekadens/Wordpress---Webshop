@@ -1,0 +1,20 @@
+.heroCatCont {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 40vh;
+}
+
+
+.heroCatCont h1 {
+    position: relative;
+    font-size: 90px;
+    color: rgba(113, 113, 113, 0.935);
+    top: unset;
+    left: unset;
+    transform: unset;
+    margin: 0px;
+    padding: 0px;
+}
