@@ -441,37 +441,6 @@ button.menu-toggle {
 }
 
 
-/* USP */
-
-.usp {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0px 0px 5px 0px;
-    background-color: rgba(239, 78, 78, 0.887);
-}
-
-.usp li {
-    display: flex;
-    align-items: center;
-    margin: 0px;
-}
-
-.usp li p {
-    margin: 5px 0px 5px 0px;
-    color: white;
-}
-
-@media screen and ( max-width: 400px ) {
-    .usp li p {
-        font-size: 15px;
-    }
-
-}
-
-
-
 /* Hero-slider-frontpage ----------------------------*/
 
 
@@ -566,10 +535,6 @@ button.menu-toggle {
 .Containers .widget_block {
     margin-bottom: 0px;
 }
-
-/* .wp-block-cover-image img.wp-block-cover__image-background, .wp-block-cover-image video.wp-block-cover__video-background, .wp-block-cover img.wp-block-cover__image-background, .wp-block-cover video.wp-block-cover__video-background, .wp-block-cover {
-    height: 70vh !important;
-} */
 
 
 

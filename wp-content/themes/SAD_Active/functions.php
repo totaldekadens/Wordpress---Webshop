@@ -27,8 +27,10 @@ add_filter( 'after_setup_theme', 'remove_new_wc_features', 99 );
 //stänger av produkt pagination
 add_filter( 'theme_mod_storefront_product_pagination', '__return_false', 11 );
 
-// Lägg till länk till varukorgen under "Slutför köp"
 
+
+
+// Lägg till länk till varukorgen under "Beställning"
 function go_to_cart(){
     ?>
     <a class="changeCart" href="<?php echo wc_get_cart_url(); ?>">Ändra varukorg</a> 
@@ -39,7 +41,6 @@ function go_to_cart(){
 }
 
 
-/* add_action('woocommerce_review_order_before_submit','go_to_cart'); */
 add_action('woocommerce_review_order_before_payment','go_to_cart');
 
 // lägger till en nästa knapp i cart
@@ -80,7 +81,7 @@ add_action('after_setup_theme', 'registrera_meny');
 // Lägger till och registrerar widgets (sidebars)
 function my_register_sidebars() {
     
-    // footer
+
     register_sidebar( array(
         'name' => 'footerSidebar1',
         'id' => 'footerSidebar1',
@@ -92,22 +93,6 @@ function my_register_sidebars() {
         'description' => 'socialmedia',
     ));
 
-/*     register_sidebar( array(
-        'name' => 'hero-top',
-        'id' => 'hero-top',
-        'description' => 'Hero-top',
-    ));
-    register_sidebar( array(
-        'name' => 'hero-tights',
-        'id' => 'hero-tights',
-        'description' => 'Hero-tights',
-    ));
-    register_sidebar( array(
-        'name' => 'hero-jacket',
-        'id' => 'hero-jacket',
-        'description' => 'Hero-jacket',
-    )); */
-    
     register_sidebar( array(
         'name' => 'hero-products',
         'id' => 'hero-products',
@@ -169,18 +154,6 @@ function newSettingsHooks() {
 }
 
 add_action('wp', 'newSettingsHooks');
-
-
-// Lägger till USP
-function addUsp() {
-
-    ?><div class="usp">
-
-        <?php dynamic_sidebar('usp') ?>
-
-    </div><?php
-
-}
 
 
 // Karusell till startsidan
