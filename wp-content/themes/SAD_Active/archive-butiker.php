@@ -16,7 +16,7 @@
 
 while (have_posts()) {
     the_post();?>
-
+    <?php $post_meta = get_post_meta(get_the_ID()); ?>
     <div class="post flex">
         <div class="postPic">
             <?php 
@@ -29,6 +29,12 @@ while (have_posts()) {
                     <h3>
                         <?php the_title(); ?>
                     </h3>
+                    <p>
+                    <?php echo $post_meta["adress"][0] ?>
+                    </p>
+                    <p>
+                    <?php echo $post_meta["oppettider"][0] ?>
+                    </p>
                 </a>
             </div>
             <div class="text">

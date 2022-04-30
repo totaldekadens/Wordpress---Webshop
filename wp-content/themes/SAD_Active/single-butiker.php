@@ -12,7 +12,7 @@ $post_meta = get_post_meta(get_the_ID());
     <div class="containerButik">
             <div class="contentButiker">
                 <h1><?php the_title() ?></h1>
-                <h4>Details :</h4>
+                <h4>Information:</h4>
 
                 <table class="table table-striped">
                     <tr>
