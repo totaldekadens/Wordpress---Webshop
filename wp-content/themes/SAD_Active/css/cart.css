@@ -12,7 +12,13 @@
     text-align: center;
 }
 
+.button.disabled, button:disabled, input[type=button].disabled, input[type=button]:disabled, input[type=reset].disabled, input[type=reset]:disabled, input[type=submit].disabled, input[type=submit]:disabled, .button.disabled, .button:disabled, .wc-block-grid__products .wc-block-grid__product .wp-block-button__link.disabled, .wc-block-grid__products .wc-block-grid__product .wp-block-button__link:disabled, .added_to_cart.disabled, .added_to_cart:disabled {
+    background-color: white;
+}
 
+.th { 
+    background-color: white;
+}
 
 
 @media (min-width: 768px){

@@ -24,7 +24,9 @@ main {
 
 .postPic img {
     width: 100%;
-    object-fit: contain;
+    max-height: 400px;
+    object-position: top;
+    object-fit: cover;
 }
 
 .contentPost {
