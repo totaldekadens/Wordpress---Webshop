@@ -10,14 +10,12 @@ function vidareKnapp(){
     nextButton.addEventListener('click', ()=>{
         
         const arr = Array.from(arrConvert)
-   
         
 
         if(is_user_logged_in){
             const newArr2 = arr.slice()
-            newArr2.splice(7, 5)  
+            newArr2.splice(7, 6)  
      
-                console.log(newArr2)
             newArr2.filter(item => {  
                 
                 if(item.value.length === 0) {
@@ -60,3 +58,17 @@ function vidareKnapp(){
 
 }
 vidareKnapp();
+
+document.querySelector(".continue").addEventListener("click", () => {
+
+    const titleOrderReview = document.getElementsByTagName("h3")[3];
+    let payment = document.getElementsByClassName("wc_payment_methods")[0]
+    let payment2 = document.getElementsByClassName("place-order")[0];
+
+    titleOrderReview.style.display = 'flex';
+    payment.style.display = 'block';
+    payment2.style.display = 'block';
+
+    titleOrderReview.scrollIntoView();
+
+})

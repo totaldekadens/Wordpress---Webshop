@@ -7,7 +7,6 @@
  * @package storefront
  */
 
-echo "archive";
 
 get_header(); ?>
 

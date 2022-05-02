@@ -45,7 +45,10 @@ add_action('init', 'move_shortDesc');
 // Lägg till länk till varukorgen under "Beställning"
 function go_to_cart(){
     ?>
-    <a class="changeCart" href="<?php echo wc_get_cart_url(); ?>">Ändra varukorg</a> 
+    <div class="orderButtons flex">
+        <a class="changeCart" href="<?php echo wc_get_cart_url(); ?>">Ändra varukorg</a> 
+        <div class="continue">Fortsätt</div>
+    </div>
     <br>
     <h3>Välj betalningsmetod</h3>
     
@@ -68,9 +71,8 @@ add_action('woocommerce_review_order_after_payment','support_checkOut');
 
 function support_checkOut() {
 
-    $page = get_page_by_title( 'kontakt' );
 ?>
-    <div class="support">Behöver du hjälp med ditt köp? Kontakta oss på +46-73 612 54 11 eller via vår <a href="<?php echo $page->guid?>">kontaktsida</a> </div> 
+    <div class="support"><?php dynamic_sidebar('supporTextCheckOut') ?> </div> 
     <?php
 }
 
@@ -135,11 +137,37 @@ function my_register_sidebars() {
         'id' => 'carousel_pic_3',
         'description' => 'Third picture in the carousel'
     ));
+    register_sidebar( array(
+        'name' => 'supporTextCheckOut',
+        'id' => 'supporTextCheckOut',
+        'description' => 'supporTextCheckOut'
+    ));
+    register_sidebar( array(
+        'name' => 'rea',
+        'id' => 'rea',
+        'description' => 'rea'
+    ));
+
+    register_sidebar( array(
+        'name' => 'trust_logos',
+        'id' => 'trust_logos',
+        'description' => 'trust_logos'
+    ));
 
 
 }
 
 add_action( 'widgets_init', 'my_register_sidebars' );
+
+
+
+function trustLogos() {
+
+ dynamic_sidebar('trust_logos'); 
+ 
+}
+
+add_action('woocommerce_review_order_after_submit', 'trustLogos');
 
 
 
@@ -244,10 +272,15 @@ function addHeroProdCat() {
 // lägger till sidebar (i detta fall hero) på "produkter"
 function addHeroShop() {
 
+
     if (is_shop()) {
         dynamic_sidebar('hero-products');
         wp_enqueue_style('allProducts'); // Lyckades inte få in den i enqueue.php. får ligga här sålänge.
     }  
+    else if (is_page('rea')) {
+        dynamic_sidebar('rea');
+    }
+    
 }
 
 

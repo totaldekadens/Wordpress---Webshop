@@ -67,29 +67,191 @@ table.woocommerce-checkout-review-order-table .product-name {
 }
 
 
-@media (min-width: 768px){
-    #order_review_heading, #order_review {
-        float: none!important;
-        margin-right: 0!important;
-        clear: right;
-        flex-direction: column; 
-        width: 100% !important; 
-    }
-    #customer_details{
-        width: 100%!important;
-        float: none!important;
-        margin-right: 0!important;
-        clear: right;
+/* NY */
+
+
+#order_review_heading {
+    padding-top: 30px;
+    justify-content: center;
+    text-align: center;
+}
+
+
+#order_review h3 {
+    padding-top: 40px; 
+    justify-content: center;
+    text-align: center;
+    display: none; 
+    font-size: 35px;
+}
+
+
+.wc_payment_methods {
+    display: none;
+}
+
+.place-order {
+    display: none;
+}
+
+
+.woocommerce-shipping-totals {
+    margin: 20px 0px 20px 0px;    
+    padding: 20px 0px 20px 0px;    
+}
+
+td strong span {
+    font-size: 15px;  
+}
+
+.orderButtons {
+    align-items: center;
+}
+
+.continue {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    height: 45.63px;
+    color: #ffffff;
+    background-color: #F06AA4;
+    text-decoration: none;
+    cursor: pointer;
+    padding: .6180469716em 1.41575em;
+    width: 120px;
+}
+
+.totalSum {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.totalSum p {
+    margin-bottom: 0px;
+}
+
+.totalSum .includes_tax {
+    display: none;
+}
+
+.sum {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+input[type=text], input[type=number], input[type=email], input[type=tel], input[type=url], input[type=password], input[type=search], textarea, .input-text {
+    background-color: white !important;
+    border-radius: 4px !important;
+    border: 1px solid grey !important;
+}
+
+th {
+    background-color: rgb(255, 255, 255) !important;
+    border-radius: 4px !important;
+}
+.button.disabled, button:disabled, input[type=button].disabled, input[type=button]:disabled, input[type=reset].disabled, input[type=reset]:disabled, input[type=submit].disabled, input[type=submit]:disabled, .button.disabled, .button:disabled, .wc-block-grid__products .wc-block-grid__product .wp-block-button__link.disabled, .wc-block-grid__products .wc-block-grid__product .wp-block-button__link:disabled, .added_to_cart.disabled, .added_to_cart:disabled, input[type="button"], input[type="reset"], input[type="submit"], .button, .widget a.button {
+    background-color: lightgrey;
+    margin-bottom: 30px;
+}
+
+h3 {
+    justify-content: center;
+    display: flex;
+    font-size: 35px !important;
+}
+
+.actions {
+    border-bottom: 1px solid lightgray;
+}
+
+
+td {
+    background-color: rgb(255, 255, 255) !important;
+}
+
+.place-order {
+    border-radius: 4px;
+}
+
+.nasta {
+    width: 100px;
+    text-align: center;
+}
+
+.nasta:hover, .continue:hover {
+    background-color: #f06aa4d3;
+}
+
+.widget a, .widget p {
+    font-size: 14px !important;
+}
+
+.wp-block-group {
+    display: flex;
+    width: 100%;
+}
+
+#order_review_heading, #order_review {
+    float: none!important;
+    margin-right: 0!important;
+    clear: right;
+    flex-direction: column; 
+    width: 100% !important; 
+}
+#customer_details{
+    width: 100%!important;
+    float: none!important;
+    margin-right: 0!important;
+    clear: right;
+}
+
+table.woocommerce-checkout-review-order-table .product-name {
+    width: 80% !important; 
+}
+
+.right-sidebar .content-area {
+    width: 100% !important;
+}
+
+table td, table th {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+}
+
+
+@media (max-width: 500px) {
+
+    .widget a, .widget p {
+        font-size: 10px !important;
     }
 
-    table.woocommerce-checkout-review-order-table .product-name {
-        width: 80% !important; 
+    .sum strong {
+        font-size: 30px !important;
     }
 
-    .right-sidebar .content-area {
-        width: 100% !important;
+   
+    h3 {
+        font-size: 25px !important;
     }
 
+}
+
+@media (max-width: 400px) {
+
+.wp-block-group {
+    flex-direction: column;
+    align-content: center !important;
+    align-items: center !important;
+}
+
+.wp-block-group div {
+    display: flex !important;
+    justify-content: center !important ;
+    margin: 5px 0px 5px 0px !important;
+    height: 30px;
+}
 
 }
 .errorText{
