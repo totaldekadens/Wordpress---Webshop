@@ -24,14 +24,11 @@ $uri = get_theme_file_uri();
 
 // Registrerar script-filer.
 
-/* wp_register_script('popper.min', $uri . '/js/popper.min.js' ); */
-/* wp_register_script('bootstrap.min', $uri . '/js/bootstrap.min.js'); */
 wp_register_script('logic', $uri . '/js/logic.js', [], false, true );
 wp_register_script('productCategory', $uri . '/js/productCategory.js', [], false, true );
 wp_register_script('product', $uri . '/js/product.js', [], false, true );
 wp_register_script('product', $uri . '/js/product.js', [], false, true );
 wp_register_script('popper', $uri . '/js/popper.min.js' );
-/* wp_register_script('bootstrap', $uri . '/js/bootstrap.min.js',['popper'] ); */
 
 
 
@@ -41,10 +38,6 @@ wp_register_script('popper', $uri . '/js/popper.min.js' );
 
 // css- script-filer  som läggs här hamnar i alla php-filer
  wp_enqueue_style('style');
-/*  wp_enqueue_style('bootstrap');
- wp_enqueue_script('popper');
- wp_enqueue_script('bootstrap');
- */
 
 
 

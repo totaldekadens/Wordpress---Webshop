@@ -10,19 +10,26 @@ Version: 1.0
 
 Content:
 
-1. General
-2. Header
-    - Header top
-    - Header navigaion
-    - Searchbar
-    - Mobile menu
-3. Hero
-4. USP  
-5. Hero-slider-frontpage   
-6. Pagination
-7. Produkter för samlingssidor // Får hitta ett bättre ord för detta sen
-8. Breadcrumbs
-9. Footer
+1.	General
+2.	Header
+        a.	Header top
+        b.	Header navigation
+        c.	Searchbar
+        d.	Mobile-menu
+3.	Hero – shop
+4.	Hero – categories
+5.	Hero – slider – frontpage
+6.	Page- kontakt
+7.	Singelbutiker
+8.	Pagination
+9.	Adress – Mina sidor
+10.	Produkter på samlingssidor
+11.	On sale
+12.	Handplockade produkter i magazine
+13.	ProductCategory
+14.	Knappar
+15.	Footer
+
 
 
 */
@@ -257,7 +264,6 @@ input[type=search] {
 
 .dgwt-wcas-sf-wrapp input[type=search].dgwt-wcas-search-input {
     background-color: rgba(227, 227, 227, 0.511);
-    /* box-shadow: 0px 0px 10px rgba(127, 127, 127, 0.312); */
     border-color: white;
 }
 
@@ -417,9 +423,6 @@ button.menu-toggle {
     padding: 1em;
     box-sizing: border-box;
 } 
-/* .wp-block-cover .wp-block-cover__image-background {
-    max-height: 60vh;
-} */
 
  p.has-text-align-center {
     font-size: 90px !important;
@@ -697,6 +700,22 @@ ul.products, .wc-block-grid__products {
     width: 90vw;
 }
 
+
+/* Sale */
+
+.wc-block-grid__product-onsale, .onsale {
+    border-color: unset;
+    color: white;
+    background-color: red;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    border-radius: 4px;
+}
+
+#menu-item-462 a {
+    color: red;
+}
 
 /* Handpicked products i magazine */
 

@@ -3,9 +3,6 @@
 -->
 
 
-<?php echo "archive-butiker"; ?>
-
-
 <?php get_header(); ?>
 
 <main class="flex column">

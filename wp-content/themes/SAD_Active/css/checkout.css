@@ -101,7 +101,7 @@ table.woocommerce-checkout-review-order-table .product-name {
 }
 
 td strong span {
-    font-size: 18px;  
+    font-size: 15px;  
 }
 
 .orderButtons {
@@ -215,6 +215,11 @@ table.woocommerce-checkout-review-order-table .product-name {
     width: 100% !important;
 }
 
+table td, table th {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+}
+
 
 @media (max-width: 500px) {
 
@@ -226,9 +231,27 @@ table.woocommerce-checkout-review-order-table .product-name {
         font-size: 30px !important;
     }
 
-   /*  .col-full {
-        margin: 0px !important;
-    } */
+   
+    h3 {
+        font-size: 25px !important;
+    }
+
+}
+
+@media (max-width: 400px) {
+
+.wp-block-group {
+    flex-direction: column;
+    align-content: center !important;
+    align-items: center !important;
+}
+
+.wp-block-group div {
+    display: flex !important;
+    justify-content: center !important ;
+    margin: 5px 0px 5px 0px !important;
+    height: 30px;
+}
 
 }
 .errorText{

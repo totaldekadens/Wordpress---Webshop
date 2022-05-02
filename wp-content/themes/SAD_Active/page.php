@@ -11,8 +11,6 @@
  */
 get_header(); ?>
 
-<?php echo "page"; ?>
-
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
@@ -29,7 +27,6 @@ get_header(); ?>
 				 *
 				 * @hooked storefront_display_comments - 10
 				 */
-				/* do_action( 'storefront_page_after' ); */
 
 			endwhile; // End of the loop.
 			?>
@@ -38,7 +35,7 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 <?php
-/* do_action( 'storefront_sidebar' ); */
+
 get_footer();
 
 ?>
