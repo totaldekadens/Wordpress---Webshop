@@ -57,12 +57,12 @@ if(is_page() && !is_front_page()) {
     wp_enqueue_style('checkout');
 
 } 
-else if (is_single('product')) {
+else if (is_woocommerce() && is_single()) {
     wp_enqueue_style('produktsida');
 } 
 // Är man på "single.php" då körs dessa filer
 else if (is_single()) {
-    
+    wp_enqueue_style('singleButik');
     wp_enqueue_script('product');
     wp_enqueue_style('singleButik');
     wp_enqueue_style('single'); // enstaka blogginlägg

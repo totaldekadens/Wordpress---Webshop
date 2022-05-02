@@ -19,7 +19,7 @@ add_theme_support('woocommerce');
 function remove_new_wc_features() {
 	remove_theme_support( 'wc-product-gallery-zoom' );
 	remove_theme_support( 'wc-product-gallery-slider' );
-    
+ 
 }
 add_filter( 'after_setup_theme', 'remove_new_wc_features', 99 );
 
@@ -27,7 +27,19 @@ add_filter( 'after_setup_theme', 'remove_new_wc_features', 99 );
 //stänger av produkt pagination
 add_filter( 'theme_mod_storefront_product_pagination', '__return_false', 11 );
 
+// flyttar på shortDesc
+function delete_shortDesc(){
 
+    remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20 );
+
+}
+add_action('init', 'delete_shortDesc');
+
+function move_shortDesc(){
+
+    add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 30 );
+}
+add_action('init', 'move_shortDesc');
 
 
 // Lägg till länk till varukorgen under "Beställning"
