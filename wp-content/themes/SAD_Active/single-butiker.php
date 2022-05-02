@@ -38,7 +38,7 @@ $post_meta = get_post_meta(get_the_ID());
                 </table>
 
                 <br>
-                <a href="../" class="btn btn-dark btn-sm">All Butiker</a>
+                <a href="../" class="btn btn-dark btn-sm">Alla Butiker</a>
             </div>
             <div class="kartaButik">
                 <?php echo $post_meta["karta"][0] ?>
