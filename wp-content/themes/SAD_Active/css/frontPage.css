@@ -53,7 +53,8 @@ ul.products, .wc-block-grid__products {
   
   
   .wp-block-cover-image img.wp-block-cover__image-background, .wp-block-cover-image video.wp-block-cover__video-background, .wp-block-cover img.wp-block-cover__image-background, .wp-block-cover video.wp-block-cover__video-background, .wp-block-cover {
-     height: 60vh !important; 
+     height: 70vh !important; 
+     margin-bottom: 110px;
 }
 
 

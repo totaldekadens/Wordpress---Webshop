@@ -322,7 +322,7 @@ add_action( 'storefront_header', 'customizedHeader', 45 );
 // Gardin på kategorier 
 function selectproductCategory() {
 
-    if(is_product_category()|| is_shop()) {
+    if(is_product_category()|| is_shop() || is_page('rea')) {
         ?>
         <div class="categorySelection">
             <div class="chooseCategory">
@@ -344,6 +344,9 @@ function selectproductCategory() {
         <?php
     }
 }
+
+
+
 
 add_action('woocommerce_before_main_content', 'selectproductCategory', 1); 
 
