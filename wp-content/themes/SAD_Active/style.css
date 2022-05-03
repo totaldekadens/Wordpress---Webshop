@@ -10,19 +10,26 @@ Version: 1.0
 
 Content:
 
-1. General
-2. Header
-    - Header top
-    - Header navigaion
-    - Searchbar
-    - Mobile menu
-3. Hero
-4. USP  
-5. Hero-slider-frontpage   
-6. Pagination
-7. Produkter för samlingssidor // Får hitta ett bättre ord för detta sen
-8. Breadcrumbs
-9. Footer
+1.	General
+2.	Header
+        a.	Header top
+        b.	Header navigation
+        c.	Searchbar
+        d.	Mobile-menu
+3.	Hero – shop
+4.	Hero – categories
+5.	Hero – slider – frontpage
+6.	Page- kontakt
+7.	Singelbutiker
+8.	Pagination
+9.	Adress – Mina sidor
+10.	Produkter på samlingssidor
+11.	On sale
+12.	Handplockade produkter i magazine
+13.	ProductCategory
+14.	Knappar
+15.	Footer
+
 
 
 */
@@ -94,7 +101,9 @@ a:focus, input:focus, textarea:focus, button:focus {
     display: none;
 }
 
-
+button.alt, button, input[type="button"].alt, input[type="reset"].alt, input[type="submit"].alt, .button.alt, .widget-area .widget a.button.alt, .nasta, .continue, .changeCart, button.disabled, button:disabled, input[type=button].disabled, input[type=button]:disabled, input[type=reset].disabled, input[type=reset]:disabled, input[type=submit].disabled, input[type=submit]:disabled, .button.disabled, .button:disabled, .wc-block-grid__products .wc-block-grid__product .wp-block-button__link.disabled, .wc-block-grid__products .wc-block-grid__product .wp-block-button__link:disabled, .added_to_cart.disabled, .added_to_cart:disabled, input[type="button"], input[type="reset"], input[type="submit"], .button, .widget a.button {
+    border-radius: 4px;
+}
 
 
 /* Header -------------------------------*/
@@ -102,6 +111,37 @@ a:focus, input:focus, textarea:focus, button:focus {
 
   .entry-header {
       display: none;
+  }
+
+
+  .count {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+      align-content: center;
+      right: 14px;
+      top: 14px;
+      font-size: 10px !important;
+      background-color: #f06aa4ad;
+      opacity: unset !important;
+      z-index: 9999;
+      color: black;
+      height: 18px;
+      width: 18px;
+      border-radius: 50%;
+  }
+
+  .site-header-cart .cart-contents span {
+      display: inline-flex;
+  }
+
+  @media screen and ( max-width: 768px ) {
+
+    .count {
+        position: unset;
+    }
   }
 
 
@@ -224,7 +264,6 @@ input[type=search] {
 
 .dgwt-wcas-sf-wrapp input[type=search].dgwt-wcas-search-input {
     background-color: rgba(227, 227, 227, 0.511);
-    /* box-shadow: 0px 0px 10px rgba(127, 127, 127, 0.312); */
     border-color: white;
 }
 
@@ -384,9 +423,6 @@ button.menu-toggle {
     padding: 1em;
     box-sizing: border-box;
 } 
-/* .wp-block-cover .wp-block-cover__image-background {
-    max-height: 60vh;
-} */
 
  p.has-text-align-center {
     font-size: 90px !important;
@@ -414,12 +450,12 @@ button.menu-toggle {
     text-align: center;
     color: white;
     width: 100%;
-    max-height: 40vh;
+    max-height: 50vh;
 }
 
 .heroCatCont img {
     width: 100%;
-    max-height: 40vh;
+    max-height: 50vh;
     object-fit: cover;
 }
 
