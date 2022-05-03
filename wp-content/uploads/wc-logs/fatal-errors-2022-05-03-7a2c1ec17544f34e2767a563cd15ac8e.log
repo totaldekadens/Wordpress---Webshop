@@ -1,0 +1,15 @@
+2022-05-03T19:39:36+00:00 CRITICAL Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, function "addUsp" not found or invalid function name in C:\Users\shahe\Desktop\XAMPP\htdocs\Wordpress---Webshop\wp-includes\class-wp-hook.php:307
+Stack trace:
+#0 C:\Users\shahe\Desktop\XAMPP\htdocs\Wordpress---Webshop\wp-includes\class-wp-hook.php(331): WP_Hook->apply_filters('', Array)
+#1 C:\Users\shahe\Desktop\XAMPP\htdocs\Wordpress---Webshop\wp-includes\plugin.php(474): WP_Hook->do_action(Array)
+#2 C:\Users\shahe\Desktop\XAMPP\htdocs\Wordpress---Webshop\wp-content\themes\SAD_Active\header.php(61): do_action('storefront_befo...')
+#3 C:\Users\shahe\Desktop\XAMPP\htdocs\Wordpress---Webshop\wp-includes\template.php(770): require_once('C:\\Users\\shahe\\...')
+#4 C:\Users\shahe\Desktop\XAMPP\htdocs\Wordpress---Webshop\wp-includes\template.php(716): load_template('C:\\Users\\shahe\\...', true, Array)
+#5 C:\Users\shahe\Desktop\XAMPP\htdocs\Wordpress---Webshop\wp-includes\general-template.php(48): locate_template(Array, true, true, Array)
+#6 C:\Users\shahe\Desktop\XAMPP\htdocs\Wordpress---Webshop\wp-content\themes\SAD_Active\front-page.php(5): get_header()
+#7 C:\Users\shahe\Desktop\XAMPP\htdocs\Wordpress---Webshop\wp-includes\template-loader.php(106): include('C:\\Users\\shahe\\...')
+#8 C:\Users\shahe\Desktop\XAMPP\htdocs\Wordpress---Webshop\wp-blog-header.php(19): require_once('C:\\Users\\shahe\\...')
+#9 C:\Users\shahe\Desktop\XAMPP\htdocs\Wordpress---Webshop\index.php(17): require('C:\\Users\\shahe\\...')
+#10 {main}
+  thrown i C:\Users\shahe\Desktop\XAMPP\htdocs\Wordpress---Webshop\wp-includes\class-wp-hook.php på rad 307
+
