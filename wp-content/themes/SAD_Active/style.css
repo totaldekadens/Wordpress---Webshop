@@ -703,10 +703,10 @@ ul.products, .wc-block-grid__products {
 
 /* Sale */
 
-.wc-block-grid__product-onsale, .onsale {
-    border-color: unset;
-    color: white;
-    background-color: red;
+.wc-block-grid__product-onsale , .woocommerce-loop-product__link .onsale  {
+    border-color: red;
+    color: red;
+    background-color: white;
     position: absolute;
     right: 5px;
     top: 5px;
@@ -716,6 +716,10 @@ ul.products, .wc-block-grid__products {
 #menu-item-462 a {
     color: red;
 }
+
+
+
+
 
 /* Handpicked products i magazine */
 

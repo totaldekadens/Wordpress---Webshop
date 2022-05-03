@@ -220,31 +220,60 @@ table td, table th {
     padding-right: 10px !important;
 }
 
+.cart-subtotal {
+    border-top: 1px solid grey;
+}
+
+table:nth-child(1) {
+    border-collapse: collapse !important;
+}
+
+
+
+table.shop_table .shop_table_responsive {
+    border-collapse: separate !important;
+}
 
 @media (max-width: 500px) {
 
     .widget a, .widget p {
         font-size: 10px !important;
     }
+    #customer_details{
+        width: 100%!important;
+        float: none!important;
+        margin-right: 0!important;
+        clear: right;
+    }
 
     .sum strong {
         font-size: 30px !important;
-    }
-
-   
-    h3 {
-        font-size: 25px !important;
     }
 
 }
 
 @media (max-width: 400px) {
 
-.wp-block-group {
-    flex-direction: column;
-    align-content: center !important;
-    align-items: center !important;
+
+.wp-block-group div {
+    display: flex !important;
+    justify-content: center !important ;
+    margin: 5px 0px 5px 0px !important;
+    height: 35px;
 }
+
+.wp-block-image .aligncenter {
+    width: 120px;
+}
+
+.woocommerce-billing-fields__field-wrapper, .woocommerce-billing-fields, .col-1, #customer_details, .checkout .woocommerce-checkout, #post-8 {
+    width: 100%;
+}
+
+}
+
+@media (max-width: 400px) {
+
 
 .wp-block-group div {
     display: flex !important;
@@ -253,7 +282,21 @@ table td, table th {
     height: 30px;
 }
 
+.wp-block-image .aligncenter {
+    width: 120px;
 }
+
+.woocommerce-billing-fields__field-wrapper, .woocommerce-billing-fields, .col-1, #customer_details, .checkout .woocommerce-checkout, #post-8 {
+    width: 100%;
+}
+
+}
+
+
+
+
+
+
 .errorText{
     display:none;
     color:#ff3333;

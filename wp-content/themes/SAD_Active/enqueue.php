@@ -21,6 +21,7 @@ $uri = get_theme_file_uri();
  wp_register_style('checkout', $uri . '/css/checkout.css');
  wp_register_style('kontakt', $uri . '/css/kontakt.css');
  wp_register_style('butik', $uri . '/css/singleButik.css');
+ wp_register_style('rea', $uri . '/css/rea.css');
 
 // Registrerar script-filer.
 
@@ -41,18 +42,26 @@ wp_register_script('popper', $uri . '/js/popper.min.js' );
 
 
 
+ if (is_page('rea')) {
+    wp_enqueue_style('rea');
+}
 
- // Är man på "page.php" då körs dessa filer
-if(is_page() && !is_front_page()) {
-    wp_enqueue_style('productCategory');
-    wp_enqueue_script('productCategory');
+else if(is_cart() || is_checkout()) {
     wp_enqueue_style('cart');
     wp_enqueue_style('checkout');
+    wp_enqueue_script('productCategory');
+}
+ // Är man på "page.php" då körs dessa filer
+else if(is_page() && !is_front_page()) {
+    wp_enqueue_style('productCategory');
+    wp_enqueue_script('productCategory');
+    
 
 } 
 else if (is_woocommerce() && is_single()) {
     wp_enqueue_style('produktsida');
 } 
+
 // Är man på "single.php" då körs dessa filer
 else if (is_single()) {
     wp_enqueue_style('singleButik');
