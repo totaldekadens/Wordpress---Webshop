@@ -112,7 +112,7 @@ ul.products, .wc-block-grid__products {
 
 
 /*Start Sida*/
-.categoryList ul{
+/* .categoryList ul{
   display : flex;
   justify-content: space-between;
   text-align: center;
@@ -126,4 +126,59 @@ ul.products, .wc-block-grid__products {
   display: block;
   width: 100%!important;
   margin: 0 auto;
+} */
+
+.categoryList ul{
+  display : flex;
+  justify-content: space-between;
+  text-align: center;
+  margin : 0!important;
+  display: flex;
+  text-align: center;
 }
+.categoryList li{
+  margin : 0!important;
+  flex : 1 35%;
+  padding: 10px;
+}
+.categoryList li img{
+  width : 100%;
+  padding : 0;
+  margin: 0;
+}
+.categoryList .wc-block-product-categories-list-item__image{
+  max-width: unset!important;
+  display: block;
+  width: 100%!important;
+  margin: 0 auto;
+}
+.d-flex {
+  display: flex;
+}
+.justify-content-between{
+  justify-content: space-between;
+}
+.align-items-center{
+  align-items: center;
+}
+.showSalesBtn{
+  border: 1px solid black;
+  color: black;
+  padding: 5px 15px;
+  border-radius: 5px;
+  font-weight: 100;
+}
+.wp-block-latest-posts__list.has-dates.has-author.wp-block-latest-posts{
+  padding: 0;
+    margin: 0;
+}
+.wp-block-latest-posts__featured-image.aligncenter img{
+  width: 2000px!important;
+}
+.myProducts img{
+ height: 400px!important;
+ width: auto!important;
+}
+/* .myProducts li{
+  padding: 0 100px!important;
+} */
