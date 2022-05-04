@@ -237,6 +237,15 @@ table.shop_table .shop_table_responsive {
     border-collapse: separate !important;
 }
 
+.backToHomepage {
+margin-top: 10px;
+}
+
+ .woocommerce-thankyou-order-received {
+    font-size: 30px;
+    margin-top: 20px;
+}
+
 @media (max-width: 500px) {
 
     .widget a, .widget p {

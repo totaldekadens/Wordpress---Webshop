@@ -176,6 +176,11 @@ button.alt, button, input[type="button"].alt, input[type="reset"].alt, input[typ
 }
 
 
+.site-header-cart .cart-contents .amount {
+    position: absolute !important;
+    right: 58px !important;
+}
+
 
 
 /* Header navigation */
@@ -350,6 +355,12 @@ button.menu-toggle {
 
 @media screen and ( max-width: 768px ) {
 
+    .site-header-cart .cart-contents .amount {
+        position: unset;
+        right: unset !important;
+    }
+   
+   
     .dgwt-wcas-enable-mobile-form {
         position: relative;
     }
