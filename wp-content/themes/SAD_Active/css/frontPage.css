@@ -67,12 +67,17 @@ ul.products, .wc-block-grid__products {
   
   .wp-block-cover-image img.wp-block-cover__image-background, .wp-block-cover-image video.wp-block-cover__video-background, .wp-block-cover img.wp-block-cover__image-background, .wp-block-cover video.wp-block-cover__video-background, .wp-block-cover {
      height: 70vh !important; 
-     margin-bottom: 110px;
+     min-height: 0px;
+     margin-bottom: 67px;
 }
 
 
   .home.blog .site-header, .home.page:not(.page-template-template-homepage) .site-header, .home.post-type-archive-product .site-header {
     margin-bottom: 0px !important;
+}
+
+.wc-block-featured-category {
+  min-height: 0px !important;
 }
 
 @media screen and ( max-width: 900px ) {
@@ -149,7 +154,6 @@ ul.products, .wc-block-grid__products {
     margin: 0;
 }
 .wp-block-latest-posts__featured-image.aligncenter img{
-   width: 2000px!important;
    max-width: 100% !important;
 
   width: 100% !important;

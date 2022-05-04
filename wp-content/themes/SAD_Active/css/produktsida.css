@@ -10,8 +10,7 @@
     width: 60%;
 }
 .single-product div.product table.variations select {
-    /* width: 32%; */
-    font-size:25px;
+    font-size:20px;
     vertical-align: middle;
     border: none;
     cursor: pointer;
@@ -84,7 +83,7 @@ ul.products {
     }
     .single-product div.product table.variations select {
         font-size:20px;
-       /*  width: 52%; */
+        outline: none;
     }
 
     .site-main ul.products.columns-3 li.product  {

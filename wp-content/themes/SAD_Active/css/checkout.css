@@ -228,9 +228,10 @@ table:nth-child(1) {
     border-collapse: collapse !important;
 }
 
-/* ul#shipping_method li {
-    min-width: 250px;
-} */
+ ul#shipping_method li {
+    flex-wrap: nowrap;
+    display: flex;
+} 
 
 
 table.shop_table .shop_table_responsive {
