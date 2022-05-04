@@ -18,11 +18,6 @@
   display: flex;
 }
 
-/* .wc-block-grid__products .wc-block-grid__product {
-  height: 40vh;
-  margin-bottom: 155px;
-} */
-
 
 
 ul.products li.product .woocommerce-LoopProduct-link, ul.products .wc-block-grid__product .woocommerce-LoopProduct-link, .wc-block-grid__products li.product .woocommerce-LoopProduct-link, .wc-block-grid__products .wc-block-grid__product .woocommerce-LoopProduct-link {
@@ -108,25 +103,6 @@ ul.products, .wc-block-grid__products {
 
 }
 
-/* Fortsätt nedan */
-
-
-/*Start Sida*/
-/* .categoryList ul{
-  display : flex;
-  justify-content: space-between;
-  text-align: center;
-  margin : 0!important;
-}
-.categoryList li{
-  margin : 0!important;
-}
-.categoryList .wc-block-product-categories-list-item__image{
-  max-width: unset!important;
-  display: block;
-  width: 100%!important;
-  margin: 0 auto;
-} */
 
 .categoryList ul {
   display : flex;
@@ -174,8 +150,10 @@ ul.products, .wc-block-grid__products {
 }
 .wp-block-latest-posts__featured-image.aligncenter img{
    width: 2000px!important;
+   max-width: 100% !important;
+
   width: 100% !important;
-  height: 300px !important;
+  height: 500px !important;
   object-fit: cover !important;
   object-position: top;
 }
@@ -193,9 +171,7 @@ ul.products, .wc-block-grid__products {
  height: 400px!important;
  width: auto!important;
 }
-/* .myProducts li{
-  padding: 0 100px!important;
-} */
+
 
 @media (max-width: 500px) {
 
