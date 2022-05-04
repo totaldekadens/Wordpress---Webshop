@@ -113,11 +113,6 @@ function my_register_sidebars() {
         'description' => 'hero-products',
     ));
     register_sidebar( array(
-        'name' => 'usp',
-        'id' => 'usp',
-        'description' => 'usp',
-    ));
-    register_sidebar( array(
         'name' => 'searchbar',
         'id' => 'searchbar',
         'description' => 'searchbar',
@@ -174,7 +169,6 @@ add_action('woocommerce_review_order_after_submit', 'trustLogos');
 // Hookar
 function newSettingsHooks() {
     
-   /*  add_action('storefront_before_content', 'addUsp', 1); */ // Lägger till usp
     add_action('storefront_before_content', 'addHeroProdCat', 2); // Lägger till Hero på kategorier
     add_action('storefront_before_content', 'addHeroShop', 2); // Lägger till Hero på "produkter"-sidan
 
