@@ -27,6 +27,11 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
                     'mid',
                     'south',
                 );
+                // $this->supports = array(   // gör så att drönaren dyker upp som leveranssätt men går just nu inte att välja det.
+                //     'shipping-zones',
+                //     'instance-settings',
+                //     'settings'
+                // );
                 $this->enabled = isset($this->settings['enabled']) ? $this->settings['enabled'] : 'yes';
                 $this->title = 'Drone Shipping';
                 $this->init();      
@@ -107,8 +112,10 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
                     $cost += $priceFromZone;
 
                 }
+                // TANKEN är då att detta skall skapa flera admin inställningar 👇
 
-                // public function process_admin_options() {
+
+                // public function process_admin_options() {   
                 //     if ( ! $this->instance_id ) {
                 //         return parent::process_admin_options();
                 //     }
@@ -145,6 +152,8 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
         return $methods;
     }
     add_filter ('woocommerce_shipping_methods', 'add_drone_shipping_method');
+
+    // räknar ut längd och vikt kostnader men funkar ej just nu pga att vi bara har sverige som ZON👇
 
     // function ds_validate_order($posted) {
 

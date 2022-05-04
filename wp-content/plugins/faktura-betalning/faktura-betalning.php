@@ -52,14 +52,14 @@ function sad_init_gateway_class() {
                     'title' => 'Enable/Disable',
                     'label' => 'Enable Faktura',
                     'type' => 'checkbox',
-                    'description' => 'Detta är en faktura betalning som sedan faktureras till din address',
+                    'description' => 'Detta är en faktura betalning som sedan faktureras till din adress',
                     'default' =>'no'
                 ),
                 'title' => array(
 
                     'title' => 'Title',
                     'type' => 'text',
-                    'description' => 'Detta är en faktura betalning som sedan faktureras till din address',
+                    'description' => 'Detta är en faktura betalning som sedan faktureras till din adress',
                     'defualt' => 'Faktura',
                     'desc_tip' => true,
 
@@ -67,7 +67,7 @@ function sad_init_gateway_class() {
                 'description' => array(
                     'title' => 'Description',
                     'type' => 'textarea',
-                    'description' => 'Detta är en faktura betalning som sedan faktureras till din address',
+                    'description' => 'Detta är en faktura betalning som sedan faktureras till din adress',
                     'default' => 'Betala inom 30 dagar annars kommer en påminnelseavgift på 300kr',
                 
                 )
