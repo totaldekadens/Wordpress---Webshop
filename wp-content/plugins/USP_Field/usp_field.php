@@ -6,8 +6,20 @@ Description: This is a plugin that adds an USP field between your header and the
 Version 1.0
 */
 
+function regSidebar() {
+
+    register_sidebar( array(
+        'name' => 'usp',
+        'id' => 'usp',
+        'description' => 'usp',
+    ));
+}
+
+add_action( 'widgets_init', 'regSidebar' );
 
 function addUsp() {
+
+    
 
     ?><div class="usp">
 
@@ -16,6 +28,8 @@ function addUsp() {
     </div><?php
 
 }
+
+add_action('storefront_before_content', 'addUsp', 1); 
 
 function style() {
     

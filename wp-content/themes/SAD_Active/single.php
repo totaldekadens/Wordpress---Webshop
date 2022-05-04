@@ -2,8 +2,6 @@
     Den här sidan representerar sidan för en enkild produkt.
 -->
 
-<?php echo "single"; ?>
-
 <?php get_header(); ?>
 
 <main class="flex column">
