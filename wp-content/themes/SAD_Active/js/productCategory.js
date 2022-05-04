@@ -14,7 +14,7 @@ function vidareKnapp(){
 
         if(is_user_logged_in){
             const newArr2 = arr.slice()
-            newArr2.splice(7, 6)  
+            newArr2.splice(7, 7)  
      
             newArr2.filter(item => {  
                 
@@ -70,5 +70,12 @@ document.querySelector(".continue").addEventListener("click", () => {
     payment2.style.display = 'block';
 
     titleOrderReview.scrollIntoView();
+
+})
+
+
+const testknapp = document.querySelector('#place_order').addEventListener('click', ()=>{
+
+console.log('hej')
 
 })
