@@ -226,7 +226,13 @@ li {
 .main-navigation ul li a, .site-title a, ul.menu li a, .site-branding h1 a, button.menu-toggle, button.menu-toggle:hover, .handheld-navigation .dropdown-toggle {
     font-size: 15px;
 }
-
+.handheld-navigation .dropdown-toggle {
+    background: transparent;
+    position: absolute;
+    top: 15px;
+    left: -52%;
+    display: block;
+}
 @media screen and ( max-width: 772px ) {
 
     .main-navigation ul li a, .site-title a, ul.menu li a, .site-branding h1 a, button.menu-toggle, button.menu-toggle:hover, .handheld-navigation .dropdown-toggle {
@@ -278,7 +284,7 @@ button.menu-toggle::before, button.menu-toggle::after, button.menu-toggle span::
     content: "";
     display: block;
     height: 2px;
-    width: 20px;
+    width: 17px;
     position: absolute;
     top: 50%;
     left: 1em;
@@ -506,7 +512,7 @@ button.menu-toggle {
   transition: 0.4s ease;
   border-radius: 0 5px 5px 0;
   user-select: none;
-  z-index: 9999;
+  z-index: 2;
 }
 
 .forward {
